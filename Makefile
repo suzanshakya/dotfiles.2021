@@ -53,7 +53,6 @@ install:
 		ln -s `pwd`/neovim/init.vim ~/.config/nvim/
 	mkdir -p ~/.config/alacritty/ && \
 		ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
-	tmux source ~/.tmux.conf
 	nvim +PlugInstall +qall
 
 
