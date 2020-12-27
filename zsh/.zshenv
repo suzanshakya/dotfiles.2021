@@ -4,5 +4,7 @@ alias l='lh'
 
 alias vin='nvim'
 
+export EDITOR=nvim
+
 source ~/projects/my_repos/dotfiles/zsh/.env_brew
 source "$HOME/.cargo/env"

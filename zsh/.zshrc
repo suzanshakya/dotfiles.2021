@@ -23,3 +23,8 @@ antibody bundle < ~/.zsh_plugins.txt
 
 ### Autojump with j
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+
+### Control + [PN] for searching matched commands
+bindkey "^P" up-line-or-search
+bindkey "^N" down-line-or-search
