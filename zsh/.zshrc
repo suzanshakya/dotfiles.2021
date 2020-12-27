@@ -25,6 +25,11 @@ antibody bundle < ~/.zsh_plugins.txt
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 
+### Emacs mode; it was already working before, not sure how it broked.
+# set emacs mode explicitly anyway
+bindkey -e
+
+
 ### Control + [PN] for searching matched commands
 bindkey "^P" up-line-or-search
 bindkey "^N" down-line-or-search
