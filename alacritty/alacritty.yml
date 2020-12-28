@@ -647,11 +647,14 @@ background_opacity: .95
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
+  # Save in vim. Send C-s which is mapped to :w in vim
+  - { key: S,        mods: Command,       chars: "\x13" }
+
+  # Quit vim. Send C-q which is mapped to :q in vim
+  - { key: W,        mods: Command,       chars: "\x11" }
+
   # New tab. Send C-b + c
   - { key: T,        mods: Command,       chars: "\x02\x63" }
-
-  # Close tab. Send C-d
-  - { key: W,        mods: Command,       chars: "\x04" }
 
   # Focus one tab right. Send C-b + n
   - { key: RBracket, mods: Command|Shift, chars: "\x02\x6e" }
