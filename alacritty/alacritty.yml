@@ -647,19 +647,19 @@ background_opacity: .95
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
-  # New tab.
+  # New tab. Send C-b + c
   - { key: T,        mods: Command,       chars: "\x02\x63" }
 
-  # Close tab.
-  - { key: W,        mods: Command,       chars: "\x02\x58" }
+  # Close tab. Send C-d
+  - { key: W,        mods: Command,       chars: "\x04" }
 
-  # Move one tab right.
+  # Move one tab right. Send C-b + n
   - { key: RBracket, mods: Command|Shift, chars: "\x02\x6e" }
 
-  # Move one tab left.
+  # Move one tab left. Send -C-b + p
   - { key: LBracket, mods: Command|Shift, chars: "\x02\x70" }
 
-  # Move to tab x.
+  # Move to tab x. Send C-b + [1-9]
   - { key: Key1,     mods: Command,       chars: "\x02\x31" }
   - { key: Key2,     mods: Command,       chars: "\x02\x32" }
   - { key: Key3,     mods: Command,       chars: "\x02\x33" }
