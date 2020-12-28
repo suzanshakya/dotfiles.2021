@@ -653,10 +653,10 @@ key_bindings:
   # Close tab. Send C-d
   - { key: W,        mods: Command,       chars: "\x04" }
 
-  # Move one tab right. Send C-b + n
+  # Focus one tab right. Send C-b + n
   - { key: RBracket, mods: Command|Shift, chars: "\x02\x6e" }
 
-  # Move one tab left. Send -C-b + p
+  # Focus one tab left. Send -C-b + p
   - { key: LBracket, mods: Command|Shift, chars: "\x02\x70" }
 
   # Move to tab x. Send C-b + [1-9]
