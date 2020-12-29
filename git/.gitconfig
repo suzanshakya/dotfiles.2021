@@ -1,3 +1,14 @@
 [user]
 	name = Sujan Shakya
 	email = suzan.shakya@gmail.com
+[alias]
+	s = status
+	co = checkout
+	ap = add -p
+	f = fetch
+	b = branch
+	br = branch -r
+	cm = commit -m
+	d = diff
+	dc = diff --cached
+	cop = checkout -p

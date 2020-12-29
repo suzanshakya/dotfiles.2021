@@ -4,6 +4,8 @@ alias l='lh'
 
 alias vi='nvim'
 
+alias g='git'
+
 export EDITOR=nvim
 
 source ~/projects/my_repos/dotfiles/zsh/.env_brew
