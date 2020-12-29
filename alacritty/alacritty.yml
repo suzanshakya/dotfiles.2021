@@ -650,10 +650,10 @@ key_bindings:
   # Save in vim. Send C-s which is mapped to :w in vim
   - { key: S,        mods: Command,       chars: "\x13" }
 
-  # Quit vim. Send C-q which is mapped to :q in vim
-  - { key: W,        mods: Command,       chars: "\x11" }
+  # Close tmux pane. Send C-d.
+  - { key: W,        mods: Command,       chars: "\x04" }
 
-  # New tab. Send C-b + c
+  # New tab in tmux. Send C-b + c
   - { key: T,        mods: Command,       chars: "\x02\x63" }
 
   # Focus one tab right. Send C-b + n

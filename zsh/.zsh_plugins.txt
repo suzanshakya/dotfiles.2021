@@ -1,5 +1,8 @@
+### List of zsh plugins powered by antibody
 romkatv/powerlevel10k
+
 zsh-users/zsh-autosuggestions
-#zdharma/history-search-multi-word
+
 zsh-users/zsh-syntax-highlighting
+
 zsh-users/zsh-history-substring-search
