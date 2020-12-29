@@ -52,8 +52,9 @@ nnoremap <C-q> :q<cr>
 let mapleader = ","
 
 
-""" Reloads vi with ,r
-nnoremap <leader>r :source $MYVIMRC<cr>
+""" Reloads vi with ,R
+""" R is consistent with tmux also, where C-b R is used for reloading config
+nnoremap <leader>R :source $MYVIMRC<cr>
 
 
 """ Replaces netrw with ranger
