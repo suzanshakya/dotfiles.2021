@@ -17,6 +17,8 @@ Plug 'francoiscabrol/ranger.vim'
 
 Plug 'vim-airline/vim-airline'
 
+Plug 'ap/vim-buftabline'
+
 call plug#end()
 
 " Show line numbers
@@ -32,6 +34,7 @@ set autoread
 nmap <C-p> :FZF<cr>
 
 nnoremap <C-s> :w<cr>
+inoremap <C-s> <esc>:w<cr>
 nnoremap <C-q> :q<cr>
 
 let mapleader = ","
