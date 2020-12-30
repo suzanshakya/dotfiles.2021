@@ -23,6 +23,7 @@ Plug 'wilon/vim-auto-session'
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
 """ Show line numbers
 set nu
 
@@ -35,8 +36,53 @@ set mouse+=a
 set autoread
 
 
-""" Control+P for FZF search
-nmap <C-p> :FZF<cr>
+""" Preserves undo history upon writing and changing buffer.
+""" This has no effect on history between sessions.
+set hidden
+
+
+""" NOT_TESTED, TODO:smartcase
+set ignorecase
+
+
+""" NOT_TESTED, TODO:smartcase
+"set notimeout
+
+
+""" Elect , to be a leader
+let mapleader = ";"
+
+
+""" Show hidden files in ranger
+let g:ranger_map_keys = 0
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+let g:ranger_replace_netrw = 1
+
+
+""" Reloads vi with ;R
+""" R is consistent with tmux also, where C-b R is used for reloading config
+nnoremap <leader>R :source $MYVIMRC<cr>
+
+
+""" Open ranger with ;rn
+map <leader>rn :Ranger<cr>
+
+
+""" FZF search with ;ff
+nnoremap <leader>ff :Files<cr>
+
+
+""" Buffer search with ;bb
+nnoremap <leader>bb :Buffers<cr>
+
+
+""" Rg search with ;rg
+nnoremap <leader>rg :Rg<cr>
+
+
+""" Delete current buffer with ;bd
+nnoremap <leader>bd :bd<cr>
+nnoremap <leader>bD :bd!<cr>
 
 
 """ C-s to save in vi. Alacritty will convert Command-s to C-s.
@@ -48,23 +94,8 @@ inoremap <C-s> <esc>:w<cr>
 nnoremap <C-q> :q<cr>
 
 
-""" Elect , to be a leader
-let mapleader = ","
-
-
-""" Reloads vi with ,R
-""" R is consistent with tmux also, where C-b R is used for reloading config
-nnoremap <leader>R :source $MYVIMRC<cr>
-
-
-""" Replaces netrw with ranger
-let g:ranger_replace_netrw = 1
-
-
 """ Upon saving a file, this code saves current buffer state so that
-""" next vi will restore current buffers
+""" next vi will restore current buffers.
+""" Note: Default behavior in vim-auto-session was to also autosave session
+""" upon quitting, that feature is disabled in their source code.
 autocmd BufWritePost * call session#MakeSession()
-
-
-""" Preserves undo history upon writing and changing buffer.
-set hidden
