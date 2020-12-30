@@ -65,16 +65,18 @@ nnoremap <leader>R :source $MYVIMRC<cr>
 
 
 """ Open ranger with ;rn
-map <leader>rn :Ranger<cr>
+nnoremap <leader>rn :Ranger<cr>
 
 
-""" FZF search with ;ff
+""" FZF commands
+""" FZF files search with ;ff
 nnoremap <leader>ff :Files<cr>
 
+""" Search in Git files with ;gg
+nnoremap <leader>gg :GFiles<cr>
 
 """ Buffer search with ;bb
 nnoremap <leader>bb :Buffers<cr>
-
 
 """ Rg search with ;rg
 nnoremap <leader>rg :Rg<cr>
