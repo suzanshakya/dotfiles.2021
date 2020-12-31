@@ -44,6 +44,7 @@ set hidden
 
 
 """ Search using smartcase
+set ignorecase
 set smartcase
 
 
