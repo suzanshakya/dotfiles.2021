@@ -37,10 +37,10 @@ export WORDCHARS='.-'
 
 
 ### Control + [PN] finds any command beginning with the exact typed command.
-bindkey "^P" up-line-or-search
-bindkey "^N" down-line-or-search
+bindkey "^P" history-substring-search-up
+bindkey "^N" history-substring-search-down
 
 
 ### UP or DOWN searches typed command in any part of history commands.
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search

@@ -3,12 +3,20 @@
 	email = suzan.shakya@gmail.com
 [alias]
 	s = status
+	st = status
 	co = checkout
 	ap = add -p
 	f = fetch
+	fe = fetch
 	b = branch
 	br = branch -r
 	cm = commit -m
 	d = diff
+	di = diff
 	dc = diff --cached
 	cop = checkout -p
+	pl = pull
+	ps = push
+	reba = rebase
+	rese = reset
+	rest = restore
