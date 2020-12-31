@@ -68,10 +68,6 @@ let g:ranger_map_keys = 0
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
 
-""" ':e .' will open ranger instead of netrw
-let g:ranger_replace_netrw = 1
-
-
 """ Reloads vi with ;R
 """ R is consistent with tmux also, where C-b R is used for reloading config
 nnoremap <leader>R :source $MYVIMRC<cr>
@@ -106,7 +102,6 @@ nnoremap <leader>h/ :History/<cr>
 nnoremap <leader>bd :bd<cr>
 nnoremap <leader>bD :bd!<cr>
 
-
 """ Goto last buffer
 nnoremap <leader>bl :b#<cr>
 
@@ -114,7 +109,6 @@ nnoremap <leader>bl :b#<cr>
 """ C-s to save in vi. Alacritty will convert Command-s to C-s.
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>
-
 
 """ C-q to quit in vi.
 nnoremap <C-q> :q<cr>
