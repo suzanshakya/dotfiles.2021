@@ -20,6 +20,8 @@ Plug 'ap/vim-buftabline'
 
 Plug 'wilon/vim-auto-session'
 
+Plug 'pbrisbin/vim-mkdir'
+
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -43,6 +45,14 @@ set hidden
 
 """ Search using smartcase
 set smartcase
+
+
+""" Save undo history
+set undofile
+
+
+""" set a directory to store the undo history
+set undodir=~/.vim/undo/
 
 
 """ Elect , to be a leader
