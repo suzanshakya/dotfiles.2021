@@ -41,21 +41,24 @@ set autoread
 set hidden
 
 
-""" NOT_TESTED, TODO:smartcase
-set ignorecase
-
-
-""" NOT_TESTED, TODO:smartcase
-"set notimeout
+""" Search using smartcase
+set smartcase
 
 
 """ Elect , to be a leader
 let mapleader = ";"
 
 
-""" Show hidden files in ranger
+""" Remove default key-binding of ;f to ;rr.
+""" ;ff is used for :Files [== :FZF]
 let g:ranger_map_keys = 0
+
+
+""" Show hidden files in ranger
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+
+
+""" ':e .' will open ranger instead of netrw
 let g:ranger_replace_netrw = 1
 
 
@@ -64,11 +67,9 @@ let g:ranger_replace_netrw = 1
 nnoremap <leader>R :source $MYVIMRC<cr>
 
 
-""" Open ranger with ;rn
-nnoremap <leader>rn :Ranger<cr>
+""" Open ranger with ;rr
+nnoremap <leader>rr :Ranger<cr>
 
-
-""" FZF commands
 """ FZF files search with ;ff
 nnoremap <leader>ff :Files<cr>
 
@@ -80,6 +81,15 @@ nnoremap <leader>bb :Buffers<cr>
 
 """ Rg search with ;rg
 nnoremap <leader>rg :Rg<cr>
+
+""" ;hh for searching file history
+nnoremap <leader>hh :History<cr>
+
+""" ;hh for searching vim command history
+nnoremap <leader>h; :History:<cr>
+
+""" ;hh for searching find history
+nnoremap <leader>h/ :History/<cr>
 
 
 """ Delete current buffer with ;bd
