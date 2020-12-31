@@ -53,6 +53,8 @@ install:
 		ln -s `pwd`/neovim/init.vim ~/.config/nvim/
 	mkdir -p ~/.config/alacritty/ && \
 		ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
+	mkdir -p ~/.config/ranger/ && \
+		ln -s `pwd`/ranger/rc.conf ~/.config/ranger/
 	nvim +PlugInstall +qall
 
 
@@ -68,3 +70,4 @@ clean:
 	rm -f ~/.gitconfig
 	rm -f ~/.config/nvim/init.vim
 	rm -f ~/.config/alacritty/alacritty.yml
+	rm -f ~/.config/ranger/rc.conf
