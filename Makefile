@@ -45,6 +45,7 @@ endif
 install:
 	ln -s `pwd`/zsh/.zshrc ~/
 	ln -s `pwd`/zsh/.zshenv ~/
+	ln -s `pwd`/zsh/.env_brew ~/
 	ln -s `pwd`/zsh/.zsh_plugins.txt ~/
 	ln -s `pwd`/zsh/.p10k.zsh ~/
 	ln -s `pwd`/tmux/.tmux.conf ~/
@@ -64,6 +65,7 @@ clean:
 	rm -f ~/.local/share/nvim/site/autoload/plug.vim
 	rm -f ~/.zshrc
 	rm -f ~/.zshenv
+	rm -f ~/.env_brew
 	rm -f ~/.zsh_plugins.*
 	rm -f ~/.p10k.zsh
 	rm -f ~/.tmux.conf

@@ -8,5 +8,5 @@ alias g='git'
 
 export EDITOR=nvim
 
-source ~/projects/my_repos/dotfiles/zsh/.env_brew
+source ~/.env_brew
 source "$HOME/.cargo/env"
