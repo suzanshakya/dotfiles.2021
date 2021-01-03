@@ -41,6 +41,10 @@ else
 	# ~/.local/share/nvim/site/autoload/plug.vim exists
 endif
 
+	mkdir -p ~/.config/nvim/
+	mkdir -p ~/.config/alacritty/
+	mkdir -p ~/.config/ranger/
+
 
 install:
 	ln -s `pwd`/zsh/.zshrc ~/
@@ -50,12 +54,9 @@ install:
 	ln -s `pwd`/zsh/.p10k.zsh ~/
 	ln -s `pwd`/tmux/.tmux.conf ~/
 	ln -s `pwd`/git/.gitconfig ~/
-	mkdir -p ~/.config/nvim/ && \
-		ln -s `pwd`/neovim/init.vim ~/.config/nvim/
-	mkdir -p ~/.config/alacritty/ && \
-		ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
-	mkdir -p ~/.config/ranger/ && \
-		ln -s `pwd`/ranger/rc.conf ~/.config/ranger/
+	ln -s `pwd`/neovim/init.vim ~/.config/nvim/
+	ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
+	ln -s `pwd`/ranger/rc.conf ~/.config/ranger/
 	nvim +PlugInstall +qall
 
 
