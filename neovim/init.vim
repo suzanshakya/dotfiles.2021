@@ -66,7 +66,8 @@ let g:ranger_map_keys = 0
 
 
 """ Show hidden files in ranger
-let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+""" Deprecating in favor of system wide ~/.config/ranger/rc.conf'
+"let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
 
 """ Reloads vi with ;R
