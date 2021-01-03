@@ -73,22 +73,24 @@ let g:ranger_map_keys = 0
 """ Reloads vi with ;R
 """ R is consistent with tmux also, where C-b R is used for reloading config
 nnoremap <leader>R :source $MYVIMRC<cr>
+nnoremap <leader>RR :source $MYVIMRC<cr>
 
 
-""" Open ranger with ;rr
-nnoremap <leader>rr :Ranger<cr>
+""" Open ranger with ;r
+nnoremap <leader>r :Ranger<cr>
 
-""" FZF files search with ;ff
-nnoremap <leader>ff :Files<cr>
-
-""" Search in Git files with ;gg
-nnoremap <leader>gg :GFiles<cr>
-
-""" Buffer search with ;bb
+""" Buffer search with ;b
+nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>bb :Buffers<cr>
 
-""" Rg search with ;rg
-nnoremap <leader>rg :Rg<cr>
+""" Search in Git files with ;g
+nnoremap <leader>g :GFiles<cr>
+
+""" FZF files search with ;f
+nnoremap <leader>f :Files<cr>
+
+""" Rg search with ;Rg
+nnoremap <leader>Rg :Rg<cr>
 
 """ ;hh for searching file history
 nnoremap <leader>hh :History<cr>
