@@ -43,12 +43,12 @@ set autoread
 set hidden
 
 
-""" Search using smartcase
+""" Search using smartcase. Both are needed for normal behavior!
 set ignorecase
 set smartcase
 
 
-""" Save undo history
+""" Automatically save undo history between sessions.
 set undofile
 
 
@@ -56,12 +56,12 @@ set undofile
 set undodir=~/.vim/undo/
 
 
-""" Elect , to be a leader
+""" Elect ; to be a leader
 let mapleader = ";"
 
 
-""" Remove default key-binding of ;f to ;rr.
-""" ;ff is used for :Files [== :FZF]
+""" Removes ranger default key-binding of ;f to ;rr.
+""" btw, ;ff is used for :Files [== :FZF]
 let g:ranger_map_keys = 0
 
 

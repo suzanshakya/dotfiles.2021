@@ -14,12 +14,12 @@ ifeq (,$(shell which nvim))
 endif
 
 ifeq (,$(shell which antibody))
-	### Install zsh plugin manager
+	### Install antibody, my zsh plugin manager
 	brew install antibody
 endif
 
 ifeq (,$(shell which autojump))
-	### Install zsh cd jump
+	### Install autojump, my shortcutter to cd with j
 	brew install autojump
 endif
 
