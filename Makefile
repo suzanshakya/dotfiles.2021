@@ -57,10 +57,10 @@ install:
 	ln -s `pwd`/neovim/init.vim ~/.config/nvim/
 	ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
 	ln -s `pwd`/ranger/rc.conf ~/.config/ranger/
-	### Initialized installation of vim plugins
-	nvim +PlugInstall +qall
 	### Initialized installation of tmux plugins
 	~/.tmux/plugins/tpm/bin/install_plugins
+	### Initialized installation of vim plugins
+	nvim +PlugInstall +qall
 
 
 clean:
