@@ -34,7 +34,7 @@ set nu
 set mouse+=a
 
 
-""" reload file if changed from elsewhere (seems not working!)
+""" reload file if changed from elsewhere (TODO test if working)
 set autoread
 
 
@@ -64,8 +64,8 @@ set undodir=~/.vim/undo/
 let mapleader = ";"
 
 
-""" Removes ranger default key-binding of ;f to ;rr.
-""" btw, ;ff is used for :Files [== :FZF]
+""" Removes ranger default key-binding of ;f.
+""" btw, ;r is used for ranger and ;f for :Files [== :FZF]
 let g:ranger_map_keys = 0
 
 
