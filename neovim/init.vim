@@ -48,6 +48,10 @@ set ignorecase
 set smartcase
 
 
+""" Confirm whether to save when deleting or quitting a changed buffer
+set confirm
+
+
 """ Automatically save undo history between sessions.
 set undofile
 
@@ -70,7 +74,7 @@ let g:ranger_map_keys = 0
 "let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
 
-""" Reloads vi with ;R
+""" Reloads vi with ;R or ;RR
 """ R is consistent with tmux also, where C-b R is used for reloading config
 nnoremap <leader>R :source $MYVIMRC<cr>
 nnoremap <leader>RR :source $MYVIMRC<cr>
@@ -81,7 +85,6 @@ nnoremap <leader>r :Ranger<cr>
 
 """ Buffer search with ;b
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>bb :Buffers<cr>
 
 """ Search in Git files with ;g
 nnoremap <leader>g :GFiles<cr>
@@ -102,12 +105,14 @@ nnoremap <leader>h; :History:<cr>
 nnoremap <leader>h/ :History/<cr>
 
 
-""" Delete current buffer with ;bd
-nnoremap <leader>bd :bd<cr>
-nnoremap <leader>bD :bd!<cr>
+""" Removes bclose map of deleting buffer with ;bd
+let g:bclose_no_plugin_maps = 1
 
-""" Goto last buffer
-nnoremap <leader>bl :b#<cr>
+""" Deletes current buffer with ;w
+nnoremap <leader>w :bd<cr>
+
+""" Goto last buffer with ;Tab
+nnoremap <leader><Tab> :b#<cr>
 
 
 """ C-s to save in vi. Alacritty will convert Command-s to C-s.
