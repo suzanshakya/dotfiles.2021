@@ -20,3 +20,4 @@
 	reba = rebase
 	rese = reset
 	rest = restore
+	m = merge

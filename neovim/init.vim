@@ -85,6 +85,9 @@ set hidden
 set ignorecase
 set smartcase
 
+""" Removes all highlights from matched chars
+nnoremap <leader>/ :noh<cr>
+
 
 """ Confirm whether to save when deleting or quitting a changed buffer
 set confirm
@@ -123,6 +126,7 @@ nnoremap <leader>r :Ranger<cr>
 
 """ Buffer search with ;b
 nnoremap <leader>b :Buffers<cr>
+nnoremap <leader><leader> :Buffers<cr>
 
 """ Search in Git files with ;g
 nnoremap <leader>g :GFiles<cr>
