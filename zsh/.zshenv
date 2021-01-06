@@ -6,8 +6,11 @@ alias vi='nvim'
 
 alias g='git'
 
+alias rg.='rg --hidden'
+
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+export PATH=~/bin:$PATH
 
 source ~/.env_brew
 source "$HOME/.cargo/env"
