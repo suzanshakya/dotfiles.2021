@@ -1,31 +1,46 @@
 """ List of vim plugins plugged by vim-plug
 call plug#begin('~/.vim/plugged')
 
+""" Easy file navigation with fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+""" Easy navigation to tmux pane with C-[hjkl]
 Plug 'christoomey/vim-tmux-navigator'
 
+""" Distracting free coding
 Plug 'junegunn/goyo.vim'
+
+""" Smooth scrolling
 Plug 'psliwka/vim-smoothie'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+""" Makes git command available from vim console
 Plug 'https://tpope.io/vim/fugitive.git'
+
+""" Shows git modifications inline
 Plug 'airblade/vim-gitgutter'
+
+""" Used mainly for buffer switching
 Plug 'https://tpope.io/vim/unimpaired.git'
 
+""" Opens ranger gui
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 
+""" Show various info on statusbar
 Plug 'vim-airline/vim-airline'
 
+""" Shows open buffer as tab in tabline
 Plug 'ap/vim-buftabline'
 
+""" Automatically save vim session
+""" saves vim-session on VimLeave and loads session on VimEnter
 Plug 'wilon/vim-auto-session'
 
+""" Automatically mkdir when saving buffer
 Plug 'pbrisbin/vim-mkdir'
 
+""" Godot syntax and runner
 Plug 'habamax/vim-godot'
 
 call plug#end()
