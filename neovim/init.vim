@@ -6,9 +6,13 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'junegunn/goyo.vim'
+Plug 'psliwka/vim-smoothie'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'https://tpope.io/vim/fugitive.git'
+Plug 'airblade/vim-gitgutter'
 Plug 'https://tpope.io/vim/unimpaired.git'
 
 Plug 'rbgrouleff/bclose.vim'
@@ -21,6 +25,8 @@ Plug 'ap/vim-buftabline'
 Plug 'wilon/vim-auto-session'
 
 Plug 'pbrisbin/vim-mkdir'
+
+Plug 'habamax/vim-godot'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
