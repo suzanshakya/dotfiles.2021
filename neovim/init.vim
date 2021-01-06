@@ -48,6 +48,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 let g:deoplete#enable_at_startup = 1
 
+""" Scrolls through deoplete completion suggestion words
 inoremap <silent><expr> <TAB>
         \ pumvisible() ? "\<C-n>" :
         \ <SID>check_back_space() ? "\<TAB>" :
