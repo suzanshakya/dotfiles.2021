@@ -111,6 +111,10 @@ let mapleader = ";"
 let g:ranger_map_keys = 0
 
 
+""" Defines godot executable. now working though!
+let g:godot_executable="/Applications/Godot.app/Contents/MacOS/Godot"
+
+
 """ Show hidden files in ranger
 """ Deprecating in favor of system wide ~/.config/ranger/rc.conf'
 "let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
