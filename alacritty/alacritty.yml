@@ -649,6 +649,9 @@ shell:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
+  # Command ` to change session on tmux. Sends chars C-b\)
+  - { key: Grave,        mods: Command,       chars: "\x13" }
+
   # Save in vim. Send C-s which is mapped to :w in vim
   - { key: S,        mods: Command,       chars: "\x13" }
 

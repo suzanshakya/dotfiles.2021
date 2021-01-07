@@ -44,3 +44,6 @@ bindkey "^N" down-line-or-search
 ### UP or DOWN searches typed command in any part of history commands.
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+### sets history size to 10000
+### saves history on rotating files for backup

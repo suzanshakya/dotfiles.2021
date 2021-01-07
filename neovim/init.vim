@@ -175,3 +175,6 @@ nnoremap <C-q> :q<cr>
 """ Note: Default behavior in vim-auto-session was to also autosave session
 """ upon quitting, that feature is disabled in their source code.
 autocmd BufWritePost * call session#MakeSession()
+
+""" Shift enter to insert newline in normal mode
+""" Fix tab space
