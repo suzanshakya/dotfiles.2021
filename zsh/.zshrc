@@ -47,3 +47,4 @@ bindkey '^[[B' history-substring-search-down
 
 ### sets history size to 10000
 ### saves history on rotating files for backup
+### Removes duplicates in zsh_history
