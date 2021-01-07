@@ -54,6 +54,7 @@ install:
 	ln -s `pwd`/zsh/.p10k.zsh ~/
 	ln -s `pwd`/tmux/.tmux.conf ~/
 	ln -s `pwd`/git/.gitconfig ~/
+	ln -s `pwd`/git/.gitignore_global ~/
 	ln -s `pwd`/neovim/init.vim ~/.config/nvim/
 	ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
 	ln -s `pwd`/ranger/rc.conf ~/.config/ranger/
@@ -74,6 +75,7 @@ clean:
 	rm -f ~/.p10k.zsh
 	rm -f ~/.tmux.conf
 	rm -f ~/.gitconfig
+	rm -f ~/.gitignore_global
 	rm -f ~/.config/nvim/init.vim
 	rm -f ~/.config/alacritty/alacritty.yml
 	rm -f ~/.config/ranger/rc.conf

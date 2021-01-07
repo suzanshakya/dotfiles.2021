@@ -21,3 +21,5 @@
 	rese = reset
 	rest = restore
 	m = merge
+[core]
+	excludesfile = /Users/sujan/.gitignore_global
