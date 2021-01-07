@@ -86,9 +86,6 @@ set hidden
 set ignorecase
 set smartcase
 
-""" Removes all highlights from matched chars
-nnoremap <leader>/ :noh<cr>
-
 
 """ Confirm whether to save when deleting or quitting a changed buffer
 set confirm
@@ -160,6 +157,9 @@ nnoremap <leader>w :bd<cr>
 
 """ Goto last buffer with ;Tab
 nnoremap <leader><Tab> :b#<cr>
+
+""" Removes all highlights from matched chars
+nnoremap <leader>/ :noh<cr>
 
 
 """ C-s to save in vi. Alacritty will convert Command-s to C-s.
