@@ -49,4 +49,5 @@ bindkey '^[[B' history-substring-search-down
 ### saves history on rotating files for backup
 ### Removes duplicates in zsh_history
 
-#source $(which virtualenvwrapper_lazy.sh)
+eval "$(pyenv init -)"
+pyenv virtualenvwrapper_lazy

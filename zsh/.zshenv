@@ -13,6 +13,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 export EDITOR=nvim
+
 export FZF_DEFAULT_COMMAND="fd \
        --type file             \
        --follow                \
@@ -22,4 +23,5 @@ export FZF_DEFAULT_COMMAND="fd \
 export PATH=~/bin:$PATH
 
 source ~/.env_brew
+
 source "$HOME/.cargo/env"
