@@ -20,7 +20,7 @@ export FZF_DEFAULT_COMMAND="fd \
        --hidden                \
        --exclude .git"
 
-export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
 ### `pyenv install` required these
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
