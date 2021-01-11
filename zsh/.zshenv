@@ -22,6 +22,10 @@ export FZF_DEFAULT_COMMAND="fd \
 
 export PATH=~/bin:$PATH
 
+### `pyenv install` required these
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
 source ~/.env_brew
 
 source "$HOME/.cargo/env"

@@ -50,4 +50,5 @@ bindkey '^[[B' history-substring-search-down
 ### Removes duplicates in zsh_history
 
 eval "$(pyenv init -)"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy

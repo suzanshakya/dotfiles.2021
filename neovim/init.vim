@@ -47,6 +47,7 @@ Plug 'habamax/vim-godot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 let g:deoplete#enable_at_startup = 1
+let g:python3_host_prog = '~/.pyenv/versions/3.9.0/bin/python'
 
 """ Scrolls through deoplete completion suggestion words
 inoremap <silent><expr> <TAB>
