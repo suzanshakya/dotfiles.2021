@@ -13,6 +13,10 @@ ifeq (,$(shell which nvim))
 	brew install neovim
 endif
 
+ifeq (,$(shell ls /Applications/Rectangle.app))
+	brew install rectangle
+endif
+
 ifeq (,$(shell which antibody))
 	### Install antibody, my zsh plugin manager
 	brew install antibody
@@ -58,6 +62,7 @@ install:
 	ln -s `pwd`/neovim/init.vim ~/.config/nvim/
 	ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
 	ln -s `pwd`/ranger/rc.conf ~/.config/ranger/
+	ln -s `pwd`/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/
 	### Initialized installation of tmux plugins
 	~/.tmux/plugins/tpm/bin/install_plugins
 	### Initialized installation of vim plugins
@@ -79,3 +84,4 @@ clean:
 	rm -f ~/.config/nvim/init.vim
 	rm -f ~/.config/alacritty/alacritty.yml
 	rm -f ~/.config/ranger/rc.conf
+	rm -f ~/Library/Preferences/com.knollsoft.Rectangle.plist
