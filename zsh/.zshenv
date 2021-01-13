@@ -21,6 +21,7 @@ export FZF_DEFAULT_COMMAND="fd \
        --exclude .git"
 
 export PATH=~/.local/bin:$PATH
+export PATH=/usr/local/opt/openjdk/bin:$PATH
 
 ### `pyenv install` required these
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
