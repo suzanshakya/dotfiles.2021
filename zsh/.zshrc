@@ -45,9 +45,9 @@ bindkey "^N" down-line-or-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-### sets history size to 10000
-### saves history on rotating files for backup
+### Sets history size upto 100000
 ### Removes duplicates in zsh_history
+### Saves command prompt output on rotating files for backkup
 
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
