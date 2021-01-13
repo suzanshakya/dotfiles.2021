@@ -12,6 +12,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
+
 export EDITOR=nvim
 
 export FZF_DEFAULT_COMMAND="fd \

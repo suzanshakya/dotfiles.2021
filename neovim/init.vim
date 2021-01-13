@@ -42,6 +42,8 @@ Plug 'pbrisbin/vim-mkdir'
 
 """ Godot syntax and runner
 Plug 'habamax/vim-godot'
+""" AsyncRun for running godot executable
+Plug 'skywind3000/asyncrun.vim'
 
 """ Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -110,7 +112,9 @@ let g:ranger_map_keys = 0
 
 
 """ Defines godot executable. now working though!
-let g:godot_executable="/Applications/Godot.app/Contents/MacOS/Godot"
+let g:godot_executable="/Applications/Godot.app/Contents/MacOS/Godot -t --resolution 715x400 --position 725,0"
+nnoremap <leader>G :AsyncStop<cr>:sleep 1<cr>:GodotRun<cr>
+nnoremap <leader>X :AsyncStop<cr>
 
 
 """ Show hidden files in ranger
