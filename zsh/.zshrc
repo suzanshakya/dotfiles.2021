@@ -52,3 +52,5 @@ bindkey '^[[B' history-substring-search-down
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy
+
+autoload -Uz compinit && compinit
