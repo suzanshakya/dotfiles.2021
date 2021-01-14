@@ -24,3 +24,5 @@
 	a = add
 [core]
 	excludesfile = /Users/sujan/.gitignore_global
+[pull]
+	ff = only
