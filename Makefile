@@ -27,6 +27,92 @@ ifeq (,$(shell which z))
 	brew install z
 endif
 
+ifeq (,$(shell which bat))
+	### Install bat, my
+	brew install bat
+endif
+
+ifeq (,$(shell which fd))
+	### Install fd, my
+	brew install fd
+endif
+
+ifeq (,$(shell which fzf))
+	### Install fzf, my
+	brew install fzf
+endif
+
+ifeq (,$(shell which gh))
+	### Install gh, my
+	brew install gh
+endif
+
+### Install newer version of git
+ifeq (,$(shell which git))
+	### Install git, my
+	brew install git
+endif
+
+ifeq (,$(shell which git-filter-repo))
+	### Install git-filter-repo, my
+	brew install git-filter-repo
+endif
+
+ifeq (,$(shell which git-sizer))
+	### Install git-sizer, my
+	brew install git-sizer
+endif
+
+ifeq (,$(shell which nginx))
+	### Install nginx, my
+	brew install nginx
+endif
+
+ifeq (,$(shell which node))
+	### Install node, my
+	brew install node
+endif
+
+ifeq (,$(shell which openjdk))
+	### Install openjdk, my
+	brew install openjdk
+endif
+
+ifeq (,$(shell which pyenv))
+	### Install pyenv, my
+	brew install pyenv
+endif
+
+ifeq (,$(shell which ranger))
+	### Install ranger, my
+	brew install ranger
+endif
+
+ifeq (,$(shell which ripgrep))
+	### Install ripgrep, my
+	brew install ripgrep
+endif
+
+ifeq (,$(shell which tree))
+	### Install tree, my
+	brew install tree
+endif
+
+ifeq (,$(shell which tig))
+	### Install tig, my
+	brew install tig
+endif
+
+#ifeq (,$(shell which ))
+#	### Install , my
+#	brew install
+#endif
+#
+
+	### Install glances
+	/usr/bin/python3 -m pip install glances
+	/usr/bin/python3 -m pip install bottle
+
 	### Install tpm, my tmux plugin manager
 ifeq (,$(wildcard ~/.tmux/plugins/tpm))
 	# ~/.tmux/plugins/tpm doesn't exist
