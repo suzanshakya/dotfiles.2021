@@ -649,6 +649,7 @@ shell:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
+  # Also add C-Tab to switch sessions as in browsers
   # Command ` to change session on tmux. Sends chars C-b\)
   - { key: Grave,        mods: Command,       chars: "\x13" }
 
