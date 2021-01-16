@@ -58,3 +58,6 @@ pyenv virtualenvwrapper_lazy
 ### So, git pu<Tab> will suggest 'pull' and 'push'.
 ### Or, ls -<Tab> will suggest '-l', '-s', '-p', '-g', '-a', etc.
 autoload -Uz compinit && compinit
+
+### cd by just typing the directory's name
+setopt autocd
