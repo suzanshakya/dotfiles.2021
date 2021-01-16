@@ -53,4 +53,8 @@ eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy
 
+
+### This actually enables tab completion on subcommands.
+### So, git pu<Tab> will suggest 'pull' and 'push'.
+### Or, ls -<Tab> will suggest '-l', '-s', '-p', '-g', '-a', etc.
 autoload -Uz compinit && compinit
