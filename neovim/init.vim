@@ -174,6 +174,9 @@ inoremap <C-s> <esc>:w<cr>
 """ C-q to quit in vi.
 nnoremap <C-q> :q<cr>
 
+""" Removes trailing space by "; "
+nnoremap <leader><space> :%s/\s\+$//e<cr>
+
 
 """ Upon saving a file, this code saves current buffer state so that
 """ next vi will restore current buffers.
