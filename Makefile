@@ -22,9 +22,9 @@ ifeq (,$(shell which antibody))
 	brew install antibody
 endif
 
-ifeq (,$(shell which autojump))
-	### Install autojump, my shortcutter to cd with j
-	brew install autojump
+ifeq (,$(shell which z))
+	### Install z - jump around
+	brew install z
 endif
 
 	### Install tpm, my tmux plugin manager

@@ -32,3 +32,6 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 source ~/.env_brew
 
 source "$HOME/.cargo/env"
+
+### Sources z - jump around
+source /usr/local/etc/profile.d/z.sh

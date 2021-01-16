@@ -21,10 +21,6 @@ antibody bundle < ~/.zsh_plugins.txt
 #source ~/.zsh_plugins.sh
 
 
-### Autojump with j
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-
 ### Emacs mode
 # zdharma/history-search-multi-word broke emacs mode, so removed that plugin.
 bindkey -e
