@@ -20,14 +20,14 @@ When new zsh shell is created, autorun `dotfiles $(cat .workon)` if there's a .w
 ***Renders 256color when available***  
   
 ***Easy Splitting***  
-`\<prefix\> + \` -> Cuts current pane into 2 horizontal panes, and focus on the new pane.  
-`\<prefix\> + |` -> full width - requires Shift  
-`\<prefix\> + -` -> split horizontally  
-`\<prefix\> + _` -> full width - requires Shift  
+`<prefix> + \` -> Cuts current pane into 2 horizontal panes, and focus on the new pane.  
+`<prefix> + |` -> full width - requires Shift  
+`<prefix> + -` -> split horizontally  
+`<prefix> + _` -> full width - requires Shift  
   
 ***Easy Navigation***  
-Navigates easily beteen panes by `\<prefix\> + [hjkl]`.  
-Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without any tmux `\<prefix\>`.  
+Navigates easily beteen panes by `<prefix> + [hjkl]`.  
+Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without any tmux `<prefix>`.  
 
 ***File Navigation in Neovim***  
 `;f` Shows `fzf` interface showing all the files, `fd` can find.  
