@@ -30,4 +30,4 @@ export FZF_DEFAULT_COMMAND="fd \
        --hidden                \
        --exclude .git"
 
-export PATH=/opt/homebrew/bin:$PATH
+source ~/.env_brew

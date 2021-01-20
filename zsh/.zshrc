@@ -13,7 +13,7 @@ fi
 
 
 ### PATH #######################################################################
-source ~/.env_brew
+#source ~/.env_brew
 
 ### pyenv setups
 eval "$(pyenv init -)"
