@@ -41,9 +41,12 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 
 
 ***Neovim***  
-`Ctrl-q Ctrl-q` to quit nvim  
 `Command-s` to save current buffer  
+`Ctrl-q Ctrl-q` to quit nvim  
 `;w`  to delete current buffer  
+`[b` to go to left buffer [tab]  
+`]b` to go to right buffer [tab]  
+`;Tab` to go to last buffer [tab]  
 
 **To install:**
 ```
