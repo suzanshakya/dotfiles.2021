@@ -2,7 +2,7 @@
 Based on simplicity, portability and efficiency!
 
 
-**Tmux features**
+**Tmux features**  
 
 ***automatically saves session state once in 15 minutes.***  
 `Ctrl+b + Ctrl+s` to save the state of all tmux sessions  
@@ -28,7 +28,7 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 ***Renders 256color when available***  
   
 
-**Neovim features**
+**Neovim features**  
 
 ***file Navigation in Neovim***  
 `;f` Shows `fzf` interface showing all the files, `fd` can find.  
@@ -45,21 +45,21 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 `]b` to go to right buffer [tab]  
 `;Tab` to go to last buffer [tab]  
 
-**Alacritty features**
+**Alacritty features**  
 `Shift hover` over hyperlink to make the link clicable.  
 
-**Zsh features**
+**Zsh features**  
 When new zsh shell is created, autorun `dotfiles $(cat .workon)` if there's a .workon file  
 
 
-**To install:**
+**To install:**  
 ```
 make
 make install
 ```
 
 
-**To uninstall:**
+**To uninstall:**  
 ```
 make clean
 ```
