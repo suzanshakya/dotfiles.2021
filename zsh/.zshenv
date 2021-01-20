@@ -3,7 +3,7 @@ source ~/.env_brew
 source "$HOME/.cargo/env"
 
 ### Sources z - jump around
-source $(brew --prefix)/etc/profile.d/z.sh
+source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 
 alias ll='ls -Ghapl'
 alias l='ls -GhAp'
@@ -38,10 +38,10 @@ export FZF_DEFAULT_COMMAND="fd \
 
 export PATH=~/.local/bin:$PATH
 #export PATH=~/Library/Python/3.8/bin:$PATH
-export PATH=$PATH:$BREW_PREFIX/opt/openjdk/bin
+export PATH=$PATH:$HOMEBREW_PREFIX/opt/openjdk/bin
 
 ### `pyenv install` required these
-export LDFLAGS="-L$BREW_PREFIX/opt/zlib/lib -L$BREW_PREFIX/opt/bzip2/lib"
-export CFLAGS="-I$BREW_PREFIX/opt/zlib/include -I$BREW_PREFIX/opt/bzip2/include"
-export CPPFLAGS="-I$BREW_PREFIX/opt/zlib/include -I$BREW_PREFIX/opt/bzip2/include"
-export PKG_CONFIG_PATH="$BREW_PREFIX/opt/zlib/lib/pkgconfig"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/zlib/lib -L$HOMEBREW_PREFIX/opt/bzip2/lib"
+export CFLAGS="-I$HOMEBREW_PREFIX/opt/zlib/include -I$HOMEBREW_PREFIX/opt/bzip2/include"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/zlib/include -I$HOMEBREW_PREFIX/opt/bzip2/include"
+export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/zlib/lib/pkgconfig"
