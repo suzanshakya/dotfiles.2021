@@ -1,5 +1,5 @@
 #zmodload zsh/zprof
-#
+
 ### Powerlevel10k
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -10,6 +10,19 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+### PATH #######################################################################
+source ~/.env_brew
+
+### pyenv setups
+eval "$(pyenv init -)"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+pyenv virtualenvwrapper_lazy
+
+export PATH=~/.local/bin:$PATH
+### PATH #######################################################################
+
 
 ### Antibody dynamic loading
 source <(antibody init)
@@ -22,15 +35,25 @@ antibody bundle < ~/.zsh_plugins.txt
 #source ~/.zsh_plugins.sh
 
 
-### Emacs mode
-# zdharma/history-search-multi-word broke emacs mode, so removed that plugin.
-bindkey -e
-
-
 ### Control + w clears one word. Separator is '/' instead of ' '.
 autoload -U select-word-style
 select-word-style bash
 export WORDCHARS='.-'
+
+
+### This actually enables tab completion on subcommands.
+### So, git pu<Tab> will suggest 'pull' and 'push'.
+### Or, ls -<Tab> will suggest '-l', '-s', '-p', '-g', '-a', etc.
+autoload -Uz compinit && compinit
+
+
+### cd by just typing the directory's name
+setopt autocd
+
+
+### Emacs mode
+# zdharma/history-search-multi-word broke emacs mode, so removed that plugin.
+bindkey -e
 
 
 ### Control + [PN] finds any command beginning with the exact typed command.
@@ -42,25 +65,14 @@ bindkey "^N" down-line-or-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+
 ### Sets history size upto 100000
 ### Removes duplicates in zsh_history
 ### Saves command prompt output on rotating files for backkup
 
-eval "$(pyenv init -)"
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-pyenv virtualenvwrapper_lazy
-
-
-### This actually enables tab completion on subcommands.
-### So, git pu<Tab> will suggest 'pull' and 'push'.
-### Or, ls -<Tab> will suggest '-l', '-s', '-p', '-g', '-a', etc.
-autoload -Uz compinit && compinit
-
-### cd by just typing the directory's name
-setopt autocd
-
 
 ### Auto run `workon` when there's .workon file at `pwd`
 [[ ! -f .workon ]] || workon $(cat .workon)
+
 
 #zprof
