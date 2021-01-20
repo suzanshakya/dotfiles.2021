@@ -9,6 +9,9 @@ When new zsh shell is created, autorun `dotfiles $(cat .workon)` if there's a .w
 
 ***tmux features***  
 
+`Ctrl+b + Ctrl+s` to save the state of all tmux sessions
+`Ctrl+b + Ctrl+r' to restore the saved state of tmux sessions
+
 ***macOS like tab navigation:***  
 `Command + t`         -> Open new tab in terminal: alacritty  
 `Command + w`         -> Close current pane [or \<prefix\> + X]  
@@ -25,7 +28,7 @@ When new zsh shell is created, autorun `dotfiles $(cat .workon)` if there's a .w
 `<prefix> + -` -> split horizontally  
 `<prefix> + _` -> full width - requires Shift  
   
-***Easy Navigation***  
+***Navigation in between tmux panes and tmux panes with vim***  
 Navigates easily beteen panes by `<prefix> + [hjkl]`.  
 Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without any tmux `<prefix>`.  
 
