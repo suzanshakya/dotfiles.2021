@@ -379,7 +379,7 @@ shell:
   args:
     - -l
     - -c
-    - "/opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux new"
+    - "tmux attach || tmux new"
 
 # Startup directory
 #
