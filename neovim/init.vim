@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 """ Easy file navigation with fzf
-Plug '/usr/local/opt/fzf'
+Plug '/opt/homebrew/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 """ Easy navigation to tmux pane with C-[hjkl]
@@ -49,7 +49,7 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
 let g:deoplete#enable_at_startup = 1
-let g:python3_host_prog = '~/.pyenv/versions/3.9.0/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.9.1/bin/python'
 
 """ Scrolls through deoplete completion suggestion words
 inoremap <silent><expr> <TAB>
@@ -88,6 +88,9 @@ set hidden
 """ Search using smartcase. Both are needed for normal behavior!
 set ignorecase
 set smartcase
+
+""" Searching stops at the end of file
+set nowrapscan
 
 
 """ Confirm whether to save when deleting or quitting a changed buffer
@@ -177,6 +180,8 @@ nnoremap <C-q> :q<cr>
 """ Removes trailing space by "; "
 nnoremap <leader><space> :%s/\s\+$//e<cr>
 
+""" In visual mode, Y to copy to clipboard
+vnoremap Y "*y
 
 """ Upon saving a file, this code saves current buffer state so that
 """ next vi will restore current buffers.

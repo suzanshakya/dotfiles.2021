@@ -1,3 +1,5 @@
+#zmodload zsh/zprof
+#
 ### Powerlevel10k
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -8,7 +10,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 ### Antibody dynamic loading
 source <(antibody init)
@@ -57,3 +58,9 @@ autoload -Uz compinit && compinit
 
 ### cd by just typing the directory's name
 setopt autocd
+
+
+### Auto run `workon` when there's .workon file at `pwd`
+[[ ! -f .workon ]] || workon $(cat .workon)
+
+#zprof

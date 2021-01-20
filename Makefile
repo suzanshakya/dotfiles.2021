@@ -156,18 +156,18 @@ install:
 
 
 clean:
-	rm -r ~/.tmux/plugins/
-	rm -r ~/.vim/plugged/
-	rm ~/.local/share/nvim/site/autoload/plug.vim
-	rm ~/.zshrc
-	rm ~/.zshenv
-	rm ~/.env_brew
-	rm ~/.zsh_plugins.*
-	rm ~/.p10k.zsh
-	rm ~/.tmux.conf
-	rm ~/.gitconfig
-	rm ~/.gitignore_global
-	rm ~/.config/nvim/init.vim
-	rm ~/.config/alacritty/alacritty.yml
-	rm ~/.config/ranger/rc.conf
-	rm ~/Library/Preferences/com.knollsoft.Rectangle.plist
+	rm -rf ~/.tmux/plugins/
+	rm -rf ~/.vim/plugged/
+	rm -r ~/.local/share/nvim/site/autoload/plug.vim
+	rm -r ~/.zshrc
+	rm -r ~/.zshenv
+	rm -r ~/.env_brew
+	rm -r ~/.zsh_plugins.*
+	rm -r ~/.p10k.zsh
+	rm -r ~/.tmux.conf
+	rm -r ~/.gitconfig
+	rm -r ~/.gitignore_global
+	rm -r ~/.config/nvim/init.vim
+	rm -r ~/.config/alacritty/alacritty.yml
+	rm -r ~/.config/ranger/rc.conf
+	rm -r ~/Library/Preferences/com.knollsoft.Rectangle.plist
