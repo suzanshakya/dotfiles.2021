@@ -49,6 +49,7 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 `Shift hover` over hyperlink to make the link clicable.  
 
 **Zsh features**  
+Prompt powered by powerlevel10k  
 When new zsh shell is created, autorun `dotfiles $(cat .workon)` if there's a .workon file  
 
 
