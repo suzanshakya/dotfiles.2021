@@ -1,9 +1,8 @@
-# dotfiles.2021
-Based on simplicity, portability and efficiency!
+# dotfiles.2021  
+Based on simplicity, portability and efficiency!  
 
 
 **Tmux features**  
-
 ***automatically saves session state once in 15 minutes.***  
 `Ctrl+b + Ctrl+s` to save the state of all tmux sessions  
 `Ctrl+b + Ctrl+r` to restore the saved state of tmux sessions  
@@ -26,10 +25,9 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 `<prefix> + _` -> full width - requires Shift  
   
 ***renders 256color when available***  
-  
+
 
 **Neovim features**  
-
 ***file Navigation in Neovim***  
 `;f` Shows `fzf` interface showing all the files, `fd` can find.  
 `;g` Shows `fzf` interface showing all the files, `git ls-files` can find.  
@@ -45,8 +43,10 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 `]b` to go to right buffer [tab]  
 `;Tab` to go to last buffer [tab]  
 
+
 **Alacritty features**  
 `Shift hover` over hyperlink to make the link clicable.  
+
 
 **Zsh features**  
 Prompt powered by powerlevel10k  
