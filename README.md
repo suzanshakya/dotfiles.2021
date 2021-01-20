@@ -25,7 +25,7 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 `<prefix> + -` -> split horizontally  
 `<prefix> + _` -> full width - requires Shift  
   
-***Renders 256color when available***  
+***renders 256color when available***  
   
 
 **Neovim features**  
