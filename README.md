@@ -6,7 +6,7 @@ Based on simplicity, portability and efficiency!
 
 ***automatically saves session state once in 15 minutes.***  
 `Ctrl+b + Ctrl+s` to save the state of all tmux sessions  
-`Ctrl+b + Ctrl+r' to restore the saved state of tmux sessions  
+`Ctrl+b + Ctrl+r` to restore the saved state of tmux sessions  
 
 ***macOS like tab navigation:***  
 `Command + t`         -> Open new tab in terminal: alacritty  
