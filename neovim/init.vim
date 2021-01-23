@@ -136,7 +136,7 @@ nnoremap <leader>r :Ranger<cr>
 
 """ Buffer search with ;b
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader><leader> :Buffers<cr>
+nnoremap <leader><leader> :GitFiles<cr>
 
 """ Search in Git files with ;g
 nnoremap <leader>g :GFiles<cr>
