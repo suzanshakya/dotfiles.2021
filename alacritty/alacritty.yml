@@ -375,9 +375,8 @@ background_opacity: .95
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /opt/homebrew/bin/zsh
+  program: zsh
   args:
-    - -l
     - -c
     - "tmux attach || tmux new"
 

@@ -13,21 +13,20 @@ fi
 
 
 ### PATH #######################################################################
-#source ~/.env_brew
+source ~/.env_brew
+
+export PATH=~/.local/bin:$PATH
 
 ### pyenv setups
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy
-
-export PATH=~/.local/bin:$PATH
 ### PATH #######################################################################
 
 
 ### Antibody dynamic loading
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
-
 
 ### Antibody static loading
 # Run after plugin change:
@@ -74,5 +73,37 @@ bindkey '^[[B' history-substring-search-down
 ### Auto run `workon` when there's .workon file at `pwd`
 [[ ! -f .workon ]] || workon $(cat .workon)
 
+
+alias ll='ls -Ghapl'
+alias l='ls -GhAp'
+
+alias vi='nvim'
+
+alias g='git'
+
+alias rg.='rg --hidden'
+alias fd.='fd --hidden --exclude .git'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
+
+alias pv='echo -n "which python      : " && which python
+          echo -n "python --version  : " && python --version
+          echo -n "which pip         : " && which pip
+          echo -n "pip --version     : " && pip --version
+          echo -n "which ipython     : " && which ipython
+          echo -n "ipython --version : " && ipython --version'
+
+
+export EDITOR=vi
+
+export FZF_DEFAULT_COMMAND="fd \
+       --type file             \
+       --follow                \
+       --hidden                \
+       --exclude .git"
 
 #zprof
