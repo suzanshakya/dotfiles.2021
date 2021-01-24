@@ -45,24 +45,31 @@ Plug 'habamax/vim-godot'
 """ AsyncRun for running godot executable
 Plug 'skywind3000/asyncrun.vim'
 
+Plug 'wfxr/minimap.vim'
+
 """ Autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
-let g:deoplete#enable_at_startup = 1
+let g:python_host_prog = '/full/path/to/neovim2/bin/python'
 let g:python3_host_prog = '~/.pyenv/versions/3.9.1/bin/python'
 
-""" Scrolls through deoplete completion suggestion words
-inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ deoplete#manual_complete()
-        function! s:check_back_space() abort "{{{
-        let col = col('.') - 1
-        return !col || getline('.')[col - 1]  =~ '\s'
-        endfunction"}}}
+Plug 'davidhalter/jedi-vim'
+let g:jedi#completions_command = "<Tab>"
 
-inoremap <silent><expr> <S-TAB>
-        \ pumvisible() ? "\<C-p>" : "\<TAB>"
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'deoplete-plugins/deoplete-jedi'
+"let g:deoplete#enable_at_startup = 1
+
+""" Scrolls through deoplete completion suggestion words
+"inoremap <silent><expr> <TAB>
+"        \ pumvisible() ? "\<C-n>" :
+"        \ <SID>check_back_space() ? "\<TAB>" :
+"        \ deoplete#manual_complete()
+"        function! s:check_back_space() abort "{{{
+"        let col = col('.') - 1
+"        return !col || getline('.')[col - 1]  =~ '\s'
+"        endfunction"}}}
+"
+"inoremap <silent><expr> <S-TAB>
+"        \ pumvisible() ? "\<C-p>" : "\<TAB>"
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -103,6 +110,10 @@ set undofile
 
 """ set a directory to store the undo history
 set undodir=~/.vim/undo/
+
+
+""" Hide ~ sign at empty lines
+let &fcs='eob: '
 
 
 """ Elect ; to be a leader
@@ -179,6 +190,8 @@ nnoremap <C-q> :q<cr>
 
 """ Removes trailing space by "; "
 nnoremap <leader><space> :%s/\s\+$//e<cr>
+
+nnoremap <leader>m :MinimapToggle<cr>
 
 """ In visual mode, Y to copy to clipboard
 vnoremap Y "*y

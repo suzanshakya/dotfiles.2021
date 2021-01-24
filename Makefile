@@ -81,6 +81,7 @@ endif
 ifeq (,$(shell which pyenv))
 	### Install pyenv, my
 	brew install pyenv
+	brew install pyenv-virtualenvwrapper
 endif
 
 ifeq (,$(shell which ranger))
@@ -109,9 +110,11 @@ endif
 #endif
 #
 
-	### Install glances
-	#/usr/bin/python3 -m pip install glances
-	#/usr/bin/python3 -m pip install bottle
+	### Install python
+	pyenv install 3.9.1
+	pyenv global 3.9.1
+	pip install pynvim
+	pip install jedi
 
 	### Install tpm, my tmux plugin manager
 ifeq (,$(wildcard ~/.tmux/plugins/tpm))
