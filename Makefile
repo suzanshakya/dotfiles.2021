@@ -110,8 +110,8 @@ endif
 #
 
 	### Install glances
-	/usr/bin/python3 -m pip install glances
-	/usr/bin/python3 -m pip install bottle
+	#/usr/bin/python3 -m pip install glances
+	#/usr/bin/python3 -m pip install bottle
 
 	### Install tpm, my tmux plugin manager
 ifeq (,$(wildcard ~/.tmux/plugins/tpm))
