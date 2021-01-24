@@ -32,7 +32,7 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 `;f` Shows `fzf` interface showing all the files, `fd` can find.  
 `;g` Shows `fzf` interface showing all the files, `git ls-files` can find.  
 `;b` Shows `fzf` interface showing all the files in vim buffer.  
-`;;` Same as `;b`  
+`;;` Same as `;g`  
 `;r` Show ranger interface at `pwd`  
 
 ***adds some new nice mappings***  
@@ -50,7 +50,7 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 
 **Zsh features**  
 Prompt powered by powerlevel10k  
-When new zsh shell is created, autorun `dotfiles $(cat .workon)` if there's a .workon file  
+When new zsh shell is created, autorun `workon $(cat .workon)` if there's a .workon file  
 
 
 **To install:**  
