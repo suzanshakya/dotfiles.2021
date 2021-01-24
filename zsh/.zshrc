@@ -97,6 +97,7 @@ alias pv='echo -n "which python      : " && which python
           echo -n "which ipython     : " && which ipython
           echo -n "ipython --version : " && ipython --version'
 
+alias pi="pip install"
 
 export EDITOR=vi
 

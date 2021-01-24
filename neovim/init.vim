@@ -147,13 +147,13 @@ nnoremap <leader>f :Files<cr>
 """ Rg search with ;Rg
 nnoremap <leader>Rg :Rg<cr>
 
-""" ;hh for searching file history
+""" ;hh for searching vim file history
 nnoremap <leader>hh :History<cr>
 
-""" ;hh for searching vim command history
+""" ;h; for searching vim command history
 nnoremap <leader>h; :History:<cr>
 
-""" ;hh for searching find history
+""" ;h/ for searching vim find history
 nnoremap <leader>h/ :History/<cr>
 
 
