@@ -100,10 +100,9 @@ alias pv='echo -n "which python      : " && which python
 
 export EDITOR=vi
 
-export FZF_DEFAULT_COMMAND="fd \
-       --type file             \
-       --follow                \
-       --hidden                \
-       --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --type file   \
+                               --follow      \
+                               --hidden      \
+                               --exclude .git"
 
 #zprof
