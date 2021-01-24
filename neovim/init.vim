@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 """ Easy file navigation with fzf
-Plug '/opt/homebrew/opt/fzf'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 """ Easy navigation to tmux pane with C-[hjkl]
