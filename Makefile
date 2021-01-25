@@ -146,7 +146,6 @@ install:
 	ln -s `pwd`/zsh/.zsh_plugins.txt ~/
 	ln -s `pwd`/zsh/.p10k.zsh ~/
 	ln -s `pwd`/tmux/.tmux.conf ~/
-	ln -s `pwd`/git/.gitconfig ~/
 	ln -s `pwd`/git/.gitignore_global ~/
 	ln -s `pwd`/neovim/init.vim ~/.config/nvim/
 	ln -s `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
@@ -156,7 +155,33 @@ install:
 	~/.tmux/plugins/tpm/bin/install_plugins
 	### Initialized installation of vim plugins
 	nvim +PlugInstall +qall
+	make gitconfig
 
+gitconfig:
+	### git aliases
+	git config --global alias.s status
+	git config --global alias.st status
+	git config --global alias.co checkout
+	git config --global alias.ap 'add -p'
+	git config --global alias.f fetch
+	git config --global alias.fe fetch
+	git config --global alias.b branch
+	git config --global alias.br 'branch -r'
+	git config --global alias.cm 'commit -m'
+	git config --global alias.d diff
+	git config --global alias.di diff
+	git config --global alias.dc 'diff --cached'
+	git config --global alias.cop 'checkout -p'
+	git config --global alias.pl pull
+	git config --global alias.ps push
+	git config --global alias.reba rebase
+	git config --global alias.rese reset
+	git config --global alias.rest restore
+	git config --global alias.m merge
+	git config --global alias.a add
+
+	git config --global core.excludesfile '~/.gitignore_global'
+	git config --global pull.ff only
 
 clean:
 	rm -rf ~/.tmux/plugins/
@@ -168,7 +193,6 @@ clean:
 	rm -r ~/.zsh_plugins.*
 	rm -r ~/.p10k.zsh
 	rm -r ~/.tmux.conf
-	rm -r ~/.gitconfig
 	rm -r ~/.gitignore_global
 	rm -r ~/.config/nvim/init.vim
 	rm -r ~/.config/alacritty/alacritty.yml
