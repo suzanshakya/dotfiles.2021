@@ -121,7 +121,7 @@ let mapleader = ";"
 
 
 """ Removes ranger default key-binding of ;f.
-""" btw, ;r is used for ranger and ;f for :Files [== :FZF]
+""" btw, ;f is used by fzf for :Files [== :FZF]
 let g:ranger_map_keys = 0
 
 
@@ -142,15 +142,14 @@ nnoremap <leader>R :source $MYVIMRC<cr>
 nnoremap <leader>RR :source $MYVIMRC<cr>
 
 
-""" Open ranger with ;r
-nnoremap <leader>r :Ranger<cr>
+""" Open ranger with ;e
+nnoremap <leader>e :Ranger<cr>
 
 """ Buffer search with ;b
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader><leader> :GitFiles<cr>
 
-""" Search in Git files with ;g
-nnoremap <leader>g :GFiles<cr>
+""" Search in Git files with ;;
+nnoremap <leader><leader> :GitFiles<cr>
 
 """ FZF files search with ;f
 nnoremap <leader>f :Files<cr>
