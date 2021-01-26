@@ -70,10 +70,6 @@ bindkey '^[[B' history-substring-search-down
 ### Saves command prompt output on rotating files for backkup
 
 
-### Auto run `workon` when there's .workon file at `pwd`
-[[ ! -f .workon ]] || workon $(cat .workon)
-
-
 alias ll='ls -Ghapl'
 alias l='ls -GhAp'
 
@@ -109,5 +105,55 @@ export FZF_DEFAULT_COMMAND="fd --type file   \
                                --follow      \
                                --hidden      \
                                --exclude .git"
+
+
+### Auto run `workon` when there's a .workon file in current or any parent dirs
+#   And deactivates when there's no .workon file in current or all parent dirs
+function cd() {
+	builtin cd "$@" || return
+
+	# save pwd because we need it later below
+	pwd="$(pwd)"
+	workon_file_check_at="$pwd"
+
+	# echo $workon_file_check_at
+
+	check_upto="/"
+	current_virtualenv=$(basename "$VIRTUAL_ENV")
+
+	while [[ $workon_file_check_at != $check_upto ]] ; do
+
+		# echo "checking at $workon_file_check_at"
+
+		workon_file=$workon_file_check_at/.workon
+
+		if [[ -f $workon_file ]] ; then
+			workon_project=$(cat $workon_file)
+
+			if [[ $workon_project == $current_virtualenv ]] ; then
+				# echo "already working on $workon_project"
+				return
+			fi
+
+			echo "workon $workon_project (set by $workon_file)"
+			workon $workon_project
+
+			# workon changes the dir to one set by setvirtualenvproject
+			# so go again to the previously saved pwd
+			builtin cd $pwd
+			return
+		fi
+
+		workon_file_check_at=$(dirname $workon_file_check_at)
+	done
+
+	# No .workon file found at any of the ancestors, deactivates if working on
+	if [[ "$VIRTUAL_ENV" ]] ; then
+		echo "deactivating $current_virtualenv"
+		deactivate
+	fi
+}
+cd . >/dev/null
+
 
 #zprof
