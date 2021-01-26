@@ -197,8 +197,6 @@ vnoremap Y "*y
 
 """ Upon saving a file, this code saves current buffer state so that
 """ next vi will restore current buffers.
-""" Note: Default behavior in vim-auto-session was to also autosave session
-""" upon quitting, that feature is disabled in their source code.
 autocmd BufWritePost * call session#MakeSession()
 
 """ Shift enter to insert newline in normal mode
