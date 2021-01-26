@@ -6,10 +6,11 @@ target:
 	make install-git
 
 
-hacker:
+hacker-env:
 	make install-alacritty
 	make install-tmux
 	make install-neovim
+	make install-python
 
 
 install-zsh:

@@ -29,11 +29,10 @@ Navigates even more easily when vim is active by `<Control> + [hjkl]` ie without
 
 **Neovim features**  
 ***file Navigation in Neovim***  
+`;e` Show ranger interface at `pwd`  
 `;f` Shows `fzf` interface showing all the files, `fd` can find.  
-`;g` Shows `fzf` interface showing all the files, `git ls-files` can find.  
+`;;` Shows `fzf` interface showing all the files, `git ls-files` can find.  
 `;b` Shows `fzf` interface showing all the files in vim buffer.  
-`;;` Same as `;g`  
-`;r` Show ranger interface at `pwd`  
 
 ***adds some new nice mappings***  
 `Command-s` to save current buffer  
@@ -55,8 +54,17 @@ When new zsh shell is created, autorun `workon $(cat .workon)` if there's a .wor
 
 **To install:**  
 ```
+# To setup minimal installation that includes zsh 'optimizations'
 make
-make install
+
+# To install python via pyenv:
+make install-python
+
+# To install alacritty, tmux, neovim & python
+make hacker-env
+
+# To install misc packages such as nginx, node, openjdk, gh, bat
+make misc
 ```
 
 
