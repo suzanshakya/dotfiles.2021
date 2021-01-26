@@ -81,8 +81,12 @@ alias vi='nvim'
 
 alias g='git'
 
-alias rg.='rg --hidden'
-alias fd.='fd --hidden --exclude .git'
+alias rg.='rg -u'
+alias rg..='rg -uu'
+alias rg...='rg -uuu'
+
+alias fd.='fd -u'
+alias fd..='fd -uu'
 
 alias ..='cd ..'
 alias ...='cd ../..'
