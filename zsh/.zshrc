@@ -90,6 +90,10 @@ alias ....='cd ../../..'
 
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 
+# Homebrew would have created symlink at /usr/local/bin/
+# But I'm using custom app downloaded from github PR supporting arm.
+alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
+
 alias pv='echo -n "which python      : " && which python
           echo -n "python --version  : " && python --version
           echo -n "which pip         : " && which pip
@@ -153,6 +157,7 @@ function cd() {
 		deactivate
 	fi
 }
+# Activate above function row!
 cd . >/dev/null
 
 

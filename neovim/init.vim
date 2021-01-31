@@ -47,6 +47,8 @@ Plug 'skywind3000/asyncrun.vim'
 
 Plug 'wfxr/minimap.vim'
 
+Plug 'arcticicestudio/nord-vim'
+
 """ Autocompletion
 let g:python_host_prog = '/full/path/to/neovim2/bin/python'
 let g:python3_host_prog = '~/.pyenv/versions/3.9.1/bin/python'
@@ -74,6 +76,7 @@ let g:jedi#completions_command = "<Tab>"
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+colorscheme nord
 
 """ Show line numbers
 set nu
@@ -194,6 +197,9 @@ nnoremap <leader>m :MinimapToggle<cr>
 
 """ In visual mode, Y to copy to clipboard
 vnoremap Y "*y
+
+
+map [2b [b[b
 
 """ Upon saving a file, this code saves current buffer state so that
 """ next vi will restore current buffers.
