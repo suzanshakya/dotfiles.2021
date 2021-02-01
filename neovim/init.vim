@@ -207,3 +207,6 @@ autocmd BufWritePost * call session#MakeSession()
 
 """ Shift enter to insert newline in normal mode
 """ Fix tab space
+
+highlight Comment cterm=italic
+highlight Comment gui=italic
