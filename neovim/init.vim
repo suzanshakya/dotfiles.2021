@@ -8,9 +8,6 @@ Plug 'junegunn/fzf.vim'
 """ Easy navigation to tmux pane with C-[hjkl]
 Plug 'christoomey/vim-tmux-navigator'
 
-""" Distracting free coding
-Plug 'junegunn/goyo.vim'
-
 """ Smooth scrolling
 Plug 'psliwka/vim-smoothie'
 
