@@ -196,14 +196,21 @@ nnoremap <leader>m :MinimapToggle<cr>
 vnoremap Y "*y
 
 
+""" Switches 2 buffers left
 map [2b [b[b
+""" Switches 2 buffers right
+map ]2b ]b]b
+
 
 """ Upon saving a file, this code saves current buffer state so that
 """ next vi will restore current buffers.
 autocmd BufWritePost * call session#MakeSession()
 
+
 """ Shift enter to insert newline in normal mode
 """ Fix tab space
 
+
+""" Enables italic font on comments
 highlight Comment cterm=italic
 highlight Comment gui=italic
