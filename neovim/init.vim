@@ -44,7 +44,8 @@ Plug 'skywind3000/asyncrun.vim'
 
 Plug 'wfxr/minimap.vim'
 
-Plug 'arcticicestudio/nord-vim'
+"Plug 'arcticicestudio/nord-vim'
+Plug 'romainl/flattened'
 
 """ Autocompletion
 let g:python_host_prog = '/full/path/to/neovim2/bin/python'
@@ -73,7 +74,8 @@ let g:jedi#completions_command = "<Tab>"
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme nord
+"colorscheme nord
+colorscheme flattened_light
 
 """ Show line numbers
 set nu
