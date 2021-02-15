@@ -88,6 +88,7 @@ gitconfig:
 	git config --global alias.rest restore
 	git config --global alias.m merge
 	git config --global alias.a add
+	git config --global alias.ls ls-files
 
 	git config --global core.excludesfile '~/.gitignore_global'
 	git config --global pull.ff only
