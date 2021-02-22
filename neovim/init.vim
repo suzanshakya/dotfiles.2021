@@ -5,6 +5,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'jremmen/vim-ripgrep'
+
 """ Easy navigation to tmux pane with C-[hjkl]
 Plug 'christoomey/vim-tmux-navigator'
 
