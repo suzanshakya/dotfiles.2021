@@ -44,6 +44,10 @@ install-zsh:
 	### Install tree, as in linux
 	brew install tree
 
+	### SSH config
+	ln -sf `pwd`/ssh/config ~/.ssh/
+	mkdir -p ~/.ssh/sockets
+
 
 install-rectangle:
 	brew install rectangle
