@@ -102,6 +102,7 @@ alias pv='echo -n "which python      : " && which python
           echo -n "ipython --version : " && ipython --version'
 
 alias pi="pip install"
+alias ta="tmux attach || tmux new -s blank"
 
 export EDITOR=vi
 

@@ -1,4 +1,4 @@
-SHELL := /bin/zsh
+SHELL := /usr/local/bin/zsh
 
 target:
 	make install-zsh
