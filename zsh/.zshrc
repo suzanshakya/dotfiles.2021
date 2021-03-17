@@ -14,6 +14,7 @@ fi
 
 ### PATH #######################################################################
 source ~/.env_brew
+source ~/.env_android
 
 export PATH=~/.local/bin:$PATH
 
