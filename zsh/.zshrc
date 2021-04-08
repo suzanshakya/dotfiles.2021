@@ -76,6 +76,24 @@ alias l='ls -GhAp'
 
 alias vi='nvim'
 
+function vip() {
+	module="$1"
+	if [[ "$module" ]] ; then
+		module_path=$(python -c"import $module; print($module.__file__)" 2>/dev/null)
+		if [[ -f "$module_path" ]] ; then
+			echo vi $module_path
+			vi "$module_path"
+		else
+                        VENV=$(basename "$VIRTUAL_ENV")
+			if [[ "$VENV" ]] ; then
+			else
+				VENV=$(pyenv version)
+			fi
+			echo \"$module\" not found in \"$VENV\"
+		fi
+	fi
+}
+
 alias g='git'
 
 alias rg.='rg -u'
