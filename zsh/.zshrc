@@ -177,7 +177,7 @@ function cd() {
 		deactivate
 	fi
 }
-# Activate above function row!
+# Activate above function now!
 cd . >/dev/null
 
 
