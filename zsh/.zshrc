@@ -13,12 +13,16 @@ fi
 
 
 ### PATH #######################################################################
-source ~/.env_brew
-source ~/.env_android
+#source ~/.env_brew
+#source ~/.env_android
 
-export PATH=~/.local/bin:$PATH
+#export PATH=~/.local/bin:$PATH
 
-### pyenv setups
+export PYENV_ROOT=~/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+export PATH=$PYENV_ROOT/shims:$PATH
+#
+#### pyenv setups
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy

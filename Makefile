@@ -1,20 +1,14 @@
-SHELL := /usr/local/bin/zsh
-
 target:
-	make install-zsh
-	make install-rectangle
-	make install-git
+	make zsh-setup
+	make tmux-setup
+	make git-setup
+	make python-setup
+	make neovim-setup
+	make install-swiss-army
 
 
-hacker-env:
-	make install-alacritty
-	make install-tmux
-	make install-neovim
-	make install-python
-
-
-install-zsh:
-	brew install zsh
+zsh-setup:
+	apt install -y zsh
 	ln -sf `pwd`/zsh/.zshrc ~/
 	ln -sf `pwd`/zsh/.zshenv ~/
 	ln -sf `pwd`/zsh/.env_brew ~/
@@ -22,52 +16,47 @@ install-zsh:
 	ln -sf `pwd`/zsh/.p10k.zsh ~/
 
 	### Install antibody, my zsh plugin manager
-	brew install antibody
+	curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
 
+
+install-swiss-army:
 	### Install z - jump around
-	brew install z
+	#brew install z
 
 	### Install ripgrep, my alternative to grep
-	brew install ripgrep
+	apt install -y ripgrep
 
 	### Install fd, my alternative to find
-	brew install fd
+	#apt install -y fd-find
 
 	### Install fzf, my file interactor
-	brew install fzf
+	apt install -y fzf
 
 	### Install ranger, my file explorer
-	brew install ranger
+	apt install -y ranger
 	mkdir -p ~/.config/ranger/
 	ln -sf `pwd`/ranger/rc.conf ~/.config/ranger/
 
 	### Install tree, as in linux
-	brew install tree
+	apt install -y tree
 
 	### SSH config
 	ln -sf `pwd`/ssh/config ~/.ssh/
-	mkdir -p ~/.ssh/sockets
+
+	### Install git-filter-repo, my alternative to git-filter-branch
+	#apt install -y git-filter-repo
+
+	### Install git-sizer, my alternative to `du -sh .git`
+	apt install -y git-sizer
 
 
-install-rectangle:
-	brew install rectangle
-	ln -sf `pwd`/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/
-
-
-install-git:
+git-setup:
 	### Install newer version of git, my version control
-	brew install git
 	ln -sf `pwd`/git/.gitignore_global ~/
 	make gitconfig
 
 	### Install tig, my alternative to git-log
-	brew install tig
-
-	### Install git-filter-repo, my alternative to git-filter-branch
-	brew install git-filter-repo
-
-	### Install git-sizer, my alternative to `du -sh .git`
-	brew install git-sizer
+	apt install -y tig
 
 
 gitconfig:
@@ -98,15 +87,7 @@ gitconfig:
 	git config --global pull.ff only
 
 
-install-alacritty:
-	brew install alacritty
-	mkdir -p ~/.config/alacritty/
-	ln -sf `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
-
-
-install-tmux:
-	brew install tmux
-
+tmux-setup:
 	### Install tpm, my tmux plugin manager
 ifeq (,$(wildcard ~/.tmux/plugins/tpm))
 	# ~/.tmux/plugins/tpm doesn't exist
@@ -120,8 +101,10 @@ endif
 	~/.tmux/plugins/tpm/bin/install_plugins
 
 
-install-neovim:
-	brew install neovim
+neovim-setup:
+	add-apt-repository ppa:neovim-ppa/unstable
+	apt update -y
+	apt install -y neovim
 
 	### Install vim-plug, my neovim plugin manager
 ifeq (,$(wildcard ~/.local/share/nvim/site/autoload/plug.vim))
@@ -133,26 +116,22 @@ endif
 	mkdir -p ~/.config/nvim/
 	ln -sf `pwd`/neovim/init.vim ~/.config/nvim/
 
-	make install-python
 	pip install pynvim
 
 	### Initialized installation of vim plugins
 	nvim +PlugInstall +qall
 
 
-install-python:
+python-setup:
 	### Install pyenv, my python version manager
-	brew install pyenv
-	brew install pyenv-virtualenvwrapper
-
-	### Load pyenv enviroment
-	eval "$$(pyenv init -)" && \
-	export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true" && \
-	pyenv virtualenvwrapper_lazy
+	git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
 	### Install python
-	pyenv install 3.9.1
-	pyenv global 3.9.1
+	apt install -y build-essential libffi-dev zlib1g-dev libbz2-dev libreadline-dev libssl-dev libsqlite3-dev
+	PYENV_ROOT=~/.pyenv ~/.pyenv/bin/pyenv install 3.9.7
+	PYENV_ROOT=~/.pyenv ~/.pyenv/bin/pyenv global 3.9.7
+
+	git clone https://github.com/pyenv/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
 
 
 misc:
@@ -184,6 +163,4 @@ clean:
 	rm -r ~/.tmux.conf
 	rm -r ~/.gitignore_global
 	rm -r ~/.config/nvim/init.vim
-	rm -r ~/.config/alacritty/alacritty.yml
 	rm -r ~/.config/ranger/rc.conf
-	rm -r ~/Library/Preferences/com.knollsoft.Rectangle.plist
