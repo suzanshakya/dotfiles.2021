@@ -15,10 +15,14 @@ fi
 ### PATH #######################################################################
 source ~/.env_brew
 source ~/.env_android
+[[ ! -f ~/.env_cocos ]] || source ~/.env_cocos
 
 export PATH=~/.local/bin:$PATH
+export PATH=/Library/PostgreSQL/13/bin:$PATH
 
 ### pyenv setups
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/shims:$PATH"
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy
@@ -130,16 +134,33 @@ export FZF_DEFAULT_COMMAND="fd --type file   \
                                --hidden      \
                                --exclude .git"
 
+export HIGHLIGHT_STYLE=solarized-light
 
 ### Auto run `workon` when there's a .workon file in current or any parent dirs
 #   And deactivates when there's no .workon file in current or all parent dirs
 function cd() {
+	# save previous pwd because we need it later below
+	prev_pwd="$(pwd)"
+
 	builtin cd "$@" || return
 
 	# save pwd because we need it later below
 	pwd="$(pwd)"
-	workon_file_check_at="$pwd"
 
+	# remove prev_pwd from PATH
+	# ??? if prev_pwd contains /scripts/
+	PATH=:$PATH:
+	PATH=${PATH//:$prev_pwd:/:}
+	PATH=${PATH#:}; PATH=${PATH%:}
+
+	# add pwd to PATH
+	# ??? if pwd contains /scripts/
+	PATH=$pwd:$PATH
+
+	# now export updated PATH
+	export PATH
+
+	workon_file_check_at="$pwd"
 	# echo $workon_file_check_at
 
 	check_upto="/"

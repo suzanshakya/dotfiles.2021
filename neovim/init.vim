@@ -216,7 +216,20 @@ autocmd BufWritePost * call session#MakeSession()
 
 
 """ Shift enter to insert newline in normal mode
+
 """ Fix tab space
+" by default, the indent is 2 spaces.
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" for html files, 2 spaces
+autocmd Filetype         html setlocal ts=2 sw=2 expandtab
+
+" for python/java/javascript files, 4 spaces
+autocmd Filetype       python setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype         java setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype   javascript setlocal ts=4 sw=4 sts=0 expandtab
 
 
 """ Enables italic font on comments

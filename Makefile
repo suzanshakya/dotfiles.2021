@@ -18,6 +18,8 @@ install-zsh:
 	ln -sf `pwd`/zsh/.zshrc ~/
 	ln -sf `pwd`/zsh/.zshenv ~/
 	ln -sf `pwd`/zsh/.env_brew ~/
+	ln -sf `pwd`/zsh/.env_android ~/
+	ln -sf `pwd`/zsh/.env_cocos ~/
 	ln -sf `pwd`/zsh/.zsh_plugins.txt ~/
 	ln -sf `pwd`/zsh/.p10k.zsh ~/
 
