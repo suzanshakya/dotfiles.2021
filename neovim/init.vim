@@ -53,6 +53,8 @@ Plug 'wfxr/minimap.vim'
 "Plug 'arcticicestudio/nord-vim'
 Plug 'romainl/flattened'
 
+Plug 'github/copilot.vim'
+
 """ Autocompletion
 let g:python_host_prog = '/full/path/to/neovim2/bin/python'
 let g:python3_host_prog = '~/.pyenv/versions/3.9.1/bin/python'
@@ -105,7 +107,7 @@ set ignorecase
 set smartcase
 
 """ Searching stops at the end of file
-set nowrapscan
+"set nowrapscan
 
 
 """ Confirm whether to save when deleting or quitting a changed buffer
@@ -188,7 +190,7 @@ nnoremap <leader><Tab> :b#<cr>
 nnoremap <leader>/ :noh<cr>
 
 
-""" C-s to save in vi. Alacritty will convert Command-s to C-s.
+""" C-s to save in vi. In mac, alacritty will convert Command-s to C-s.
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>
 
@@ -228,8 +230,12 @@ autocmd Filetype         html setlocal ts=2 sw=2 expandtab
 
 " for python/java/javascript files, 4 spaces
 autocmd Filetype       python setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype           sh setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype         java setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype   javascript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype          xml setlocal ts=4 sw=4 sts=0 expandtab
+autocmd BufRead,BufNewFile *.gradle set filetype=groovy
+autocmd Filetype       groovy setlocal ts=4 sw=4 sts=0 expandtab
 
 
 """ Enables italic font on comments
