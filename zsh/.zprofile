@@ -3,11 +3,11 @@
 [[ -f ~/.env_cocos ]] && source ~/.env_cocos
 
 
+export PATH="$(pyenv root)/shims:$PATH"
 export PATH=~/.local/bin:$PATH
 
 #export PATH=/Library/PostgreSQL/13/bin:$PATH
 
-export PATH="$(pyenv root)/shims:$PATH"
 
 export EDITOR=vi
 
