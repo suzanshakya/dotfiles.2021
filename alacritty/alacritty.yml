@@ -403,8 +403,8 @@ background_opacity: .95
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
-  program: /opt/homebrew/bin/zsh
+#shell:
+  #program: /opt/homebrew/bin/zsh
   #args:
   #  - -c
   #  - "tmux attach || tmux new -s blank"

@@ -1,34 +1,34 @@
-SHELL := /usr/local/bin/zsh
-
 target:
 	make install-zsh
 	make install-rectangle
 	make install-git
 
-
-hacker-env:
-	make install-alacritty
-	make install-tmux
-	make install-neovim
-	make install-python
+brew-setup:
+	[[ -f /opt/homebrew/bin/brew ]] || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	#ln -sf `pwd`/zsh/.zprofile ~/
 
 
-install-zsh:
-	brew install zsh
-	ln -sf `pwd`/zsh/.zshrc ~/
-	ln -sf `pwd`/zsh/.zshenv ~/
+#hacker-env:
+#	make install-alacritty
+#	make install-tmux
+#	make install-neovim
+#	make install-python
+
+
+zsh-setup:
 	ln -sf `pwd`/zsh/.env_brew ~/
 	ln -sf `pwd`/zsh/.env_android ~/
 	ln -sf `pwd`/zsh/.env_cocos ~/
+	ln -sf `pwd`/zsh/.zprofile ~/
+	ln -sf `pwd`/zsh/.zshrc ~/
 	ln -sf `pwd`/zsh/.zsh_plugins.txt ~/
 	ln -sf `pwd`/zsh/.p10k.zsh ~/
 
 	### Install antibody, my zsh plugin manager
 	brew install antibody
 
-	### Install z - jump around
-	brew install z
 
+dev-setup:
 	### Install ripgrep, my alternative to grep
 	brew install ripgrep
 
@@ -46,19 +46,22 @@ install-zsh:
 	### Install tree, as in linux
 	brew install tree
 
+	### Install z - jump around
+	brew install z
+
 	### SSH config
 	ln -sf `pwd`/ssh/config ~/.ssh/
 	mkdir -p ~/.ssh/sockets
 
 
-install-rectangle:
+rectangle-setup:
 	brew install rectangle
 	ln -sf `pwd`/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/
 
 
-install-git:
+git-setup:
 	### Install newer version of git, my version control
-	brew install git
+	#brew install git
 	ln -sf `pwd`/git/.gitignore_global ~/
 	make gitconfig
 
@@ -100,13 +103,13 @@ gitconfig:
 	git config --global pull.ff only
 
 
-install-alacritty:
+alacritty-setup:
 	brew install alacritty
 	mkdir -p ~/.config/alacritty/
 	ln -sf `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
 
 
-install-tmux:
+tmux-setup:
 	brew install tmux
 
 	### Install tpm, my tmux plugin manager
@@ -122,7 +125,7 @@ endif
 	~/.tmux/plugins/tpm/bin/install_plugins
 
 
-install-neovim:
+neovim-setup:
 	brew install neovim
 
 	### Install vim-plug, my neovim plugin manager
@@ -135,14 +138,14 @@ endif
 	mkdir -p ~/.config/nvim/
 	ln -sf `pwd`/neovim/init.vim ~/.config/nvim/
 
-	make install-python
-	pip install pynvim
+	make python-setup
+	PATH=~/.pyenv/shims:$$PATH && pip install pynvim
 
 	### Initialized installation of vim plugins
 	nvim +PlugInstall +qall
 
 
-install-python:
+python-setup:
 	### Install pyenv, my python version manager
 	brew install pyenv
 	brew install pyenv-virtualenvwrapper
@@ -153,8 +156,8 @@ install-python:
 	pyenv virtualenvwrapper_lazy
 
 	### Install python
-	pyenv install 3.9.1
-	pyenv global 3.9.1
+	[[ -d ~/.pyenv/versions/3.10.2 ]] || pyenv install 3.10.2
+	pyenv global 3.10.2
 
 
 misc:

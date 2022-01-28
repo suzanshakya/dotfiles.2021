@@ -1,5 +1,6 @@
 #zmodload zsh/zprof
 
+
 ### Powerlevel10k
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -12,23 +13,6 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-### PATH #######################################################################
-source ~/.env_brew
-source ~/.env_android
-[[ ! -f ~/.env_cocos ]] || source ~/.env_cocos
-
-export PATH=~/.local/bin:$PATH
-export PATH=/Library/PostgreSQL/13/bin:$PATH
-
-### pyenv setups
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/shims:$PATH"
-eval "$(pyenv init -)"
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-pyenv virtualenvwrapper_lazy
-### PATH #######################################################################
-
-
 ### Antibody dynamic loading
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
@@ -37,6 +21,16 @@ antibody bundle < ~/.zsh_plugins.txt
 # Run after plugin change:
 # antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 #source ~/.zsh_plugins.sh
+
+
+# Sources z - jump around
+source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+
+
+### pyenv setups
+eval "$(pyenv init -)"
+pyenv virtualenvwrapper_lazy
+### PATH #######################################################################
 
 
 ### Control + w clears one word. Separator is '/' instead of ' '.
@@ -75,11 +69,41 @@ bindkey '^[[B' history-substring-search-down
 ### Saves command prompt output on rotating files for backkup
 
 
+### Aliases
 alias ll='ls -Ghapl'
 alias l='ls -GhAp'
 
-alias vi='nvim'
+alias rg.='rg -u'
+alias rg..='rg -uu'
+alias rg...='rg -uuu'
 
+alias fd.='fd -u'
+alias fd..='fd -uu'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias g='git'
+alias vi='nvim'
+alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
+
+# Homebrew would have created symlink at /usr/local/bin/
+# But I'm using custom app downloaded from github PR supporting arm.
+#alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
+
+alias pv='echo -n "which python      : " && which python
+          echo -n "python --version  : " && python --version
+          echo -n "which pip         : " && which pip
+          echo -n "pip --version     : " && pip --version
+          echo -n "which ipython     : " && which ipython
+          echo -n "ipython --version : " && ipython --version'
+
+alias pi="pip install"
+alias ta="tmux attach || tmux new -s blank"
+
+
+### `vip os` will open python os module with vi
 function vip() {
 	module="$1"
 	if [[ "$module" ]] ; then
@@ -98,43 +122,6 @@ function vip() {
 	fi
 }
 
-alias g='git'
-
-alias rg.='rg -u'
-alias rg..='rg -uu'
-alias rg...='rg -uuu'
-
-alias fd.='fd -u'
-alias fd..='fd -uu'
-
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
-alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
-
-# Homebrew would have created symlink at /usr/local/bin/
-# But I'm using custom app downloaded from github PR supporting arm.
-alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
-
-alias pv='echo -n "which python      : " && which python
-          echo -n "python --version  : " && python --version
-          echo -n "which pip         : " && which pip
-          echo -n "pip --version     : " && pip --version
-          echo -n "which ipython     : " && which ipython
-          echo -n "ipython --version : " && ipython --version'
-
-alias pi="pip install"
-alias ta="tmux attach || tmux new -s blank"
-
-export EDITOR=vi
-
-export FZF_DEFAULT_COMMAND="fd --type file   \
-                               --follow      \
-                               --hidden      \
-                               --exclude .git"
-
-export HIGHLIGHT_STYLE=solarized-light
 
 ### Auto run `workon` when there's a .workon file in current or any parent dirs
 #   And deactivates when there's no .workon file in current or all parent dirs
