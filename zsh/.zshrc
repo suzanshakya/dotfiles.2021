@@ -30,7 +30,6 @@ source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 ### pyenv setups
 eval "$(pyenv init -)"
 pyenv virtualenvwrapper_lazy
-### PATH #######################################################################
 
 
 ### Control + w clears one word. Separator is '/' instead of ' '.
