@@ -112,6 +112,8 @@ alacritty-setup:
 tmux-setup:
 	brew install tmux
 
+	tic -xe tmux-256color tmux/tmux-256color
+
 	### Install tpm, my tmux plugin manager
 ifeq (,$(wildcard ~/.tmux/plugins/tpm))
 	# ~/.tmux/plugins/tpm doesn't exist
