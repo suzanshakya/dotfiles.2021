@@ -1,4 +1,7 @@
+# mac system files
 .DS_Store
+Icon?
+
 *.pyc
 *.pyo
 
