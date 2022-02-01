@@ -69,7 +69,8 @@ bindkey '^[[B' history-substring-search-down
 
 
 ### Aliases
-alias ll='ls -Ghapl'
+alias ll='ls -Gapl'
+alias lh='ls -Ghapl'
 alias l='ls -GhAp'
 
 alias rg.='rg -u'
