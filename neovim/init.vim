@@ -202,6 +202,9 @@ nnoremap <leader><space> :%s/\s\+$//e<cr>
 
 nnoremap <leader>m :MinimapToggle<cr>
 
+nnoremap <leader>\ <C-W>v
+nnoremap <leader>- <C-W>s
+
 """ In visual mode, Y to copy to clipboard
 vnoremap Y "*y
 
