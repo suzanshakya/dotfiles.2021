@@ -53,14 +53,14 @@ Plug 'wfxr/minimap.vim'
 "Plug 'arcticicestudio/nord-vim'
 Plug 'romainl/flattened'
 
-Plug 'github/copilot.vim'
-
 """ Autocompletion
 let g:python_host_prog = '/full/path/to/neovim2/bin/python'
-let g:python3_host_prog = '~/.pyenv/versions/3.9.1/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.10.2/bin/python'
 
 Plug 'davidhalter/jedi-vim'
-let g:jedi#completions_command = "<Tab>"
+"let g:jedi#completions_command = "<Tab>"
+
+Plug 'github/copilot.vim'
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'deoplete-plugins/deoplete-jedi'
@@ -83,7 +83,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "colorscheme nord
-colorscheme flattened_light
+colorscheme flattened_dark
 
 """ Show line numbers
 set nu
