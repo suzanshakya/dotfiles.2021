@@ -17,3 +17,4 @@ export FZF_DEFAULT_COMMAND="fd --type file   \
                                --exclude .git"
 
 export HIGHLIGHT_STYLE=solarized-light
+#export PYTHONSTARTUP=~/.pythonrc

@@ -239,6 +239,7 @@ autocmd Filetype   javascript setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype          xml setlocal ts=4 sw=4 sts=0 expandtab
 autocmd BufRead,BufNewFile *.gradle set filetype=groovy
 autocmd Filetype       groovy setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype       gdscript setlocal tabstop=4 shiftwidth=4 sts=0
 
 
 """ Enables italic font on comments

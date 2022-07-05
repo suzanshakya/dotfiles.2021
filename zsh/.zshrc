@@ -37,6 +37,8 @@ autoload -U select-word-style
 select-word-style bash
 export WORDCHARS='.-'
 
+export VISUAL=nvim
+export EDITOR=nvim
 
 ### This actually enables tab completion on subcommands.
 ### So, git pu<Tab> will suggest 'pull' and 'push'.
@@ -87,6 +89,8 @@ alias ....='cd ../../..'
 alias g='git'
 alias vi='nvim'
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
+
+alias k='kubectl'
 
 # Homebrew would have created symlink at /usr/local/bin/
 # But I'm using custom app downloaded from github PR supporting arm.
