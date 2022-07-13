@@ -87,10 +87,12 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias g='git'
+alias k='kubectl'
+alias d='docker'
+
 alias vi='nvim'
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 
-alias k='kubectl'
 
 # Homebrew would have created symlink at /usr/local/bin/
 # But I'm using custom app downloaded from github PR supporting arm.
