@@ -5,6 +5,7 @@
 
 export PATH="$(pyenv root)/shims:$PATH"
 export PATH=~/.local/bin:$PATH
+export PATH=$PATH:~/projects/teslatech/callbreakserver/scripts/docker
 
 #export PATH=/Library/PostgreSQL/13/bin:$PATH
 

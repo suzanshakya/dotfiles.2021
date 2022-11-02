@@ -93,6 +93,8 @@ alias d='docker'
 alias vi='nvim'
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 
+alias c='clear'
+
 
 # Homebrew would have created symlink at /usr/local/bin/
 # But I'm using custom app downloaded from github PR supporting arm.
@@ -194,5 +196,11 @@ function cd() {
 # Activate above function now!
 cd . >/dev/null
 
+PATH=~/projects/teslatech/callbreakserver/k8s_scripts:$PATH
+
+source <(kubectl completion zsh)
 
 #zprof
+
+# krew path
+#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
