@@ -55,10 +55,12 @@ Plug 'romainl/flattened'
 
 """ Autocompletion
 let g:python_host_prog = '/full/path/to/neovim2/bin/python'
-let g:python3_host_prog = '~/.pyenv/versions/3.9.1/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.10.2/bin/python'
 
 Plug 'davidhalter/jedi-vim'
-let g:jedi#completions_command = "<Tab>"
+"let g:jedi#completions_command = "<Tab>"
+
+Plug 'github/copilot.vim'
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'deoplete-plugins/deoplete-jedi'
@@ -81,7 +83,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "colorscheme nord
-colorscheme flattened_light
+colorscheme flattened_dark
 
 """ Show line numbers
 set nu
@@ -105,7 +107,7 @@ set ignorecase
 set smartcase
 
 """ Searching stops at the end of file
-set nowrapscan
+"set nowrapscan
 
 
 """ Confirm whether to save when deleting or quitting a changed buffer
@@ -188,7 +190,7 @@ nnoremap <leader><Tab> :b#<cr>
 nnoremap <leader>/ :noh<cr>
 
 
-""" C-s to save in vi. Alacritty will convert Command-s to C-s.
+""" C-s to save in vi. In mac, alacritty will convert Command-s to C-s.
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <esc>:w<cr>
 
@@ -199,6 +201,9 @@ nnoremap <C-q> :q<cr>
 nnoremap <leader><space> :%s/\s\+$//e<cr>
 
 nnoremap <leader>m :MinimapToggle<cr>
+
+nnoremap <leader>\ <C-W>v
+nnoremap <leader>- <C-W>s
 
 """ In visual mode, Y to copy to clipboard
 vnoremap Y "*y
@@ -216,7 +221,25 @@ autocmd BufWritePost * call session#MakeSession()
 
 
 """ Shift enter to insert newline in normal mode
+
 """ Fix tab space
+" by default, the indent is 2 spaces.
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" for html files, 2 spaces
+autocmd Filetype         html setlocal ts=2 sw=2 expandtab
+
+" for python/java/javascript files, 4 spaces
+autocmd Filetype       python setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype           sh setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype         java setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype   javascript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype          xml setlocal ts=4 sw=4 sts=0 expandtab
+autocmd BufRead,BufNewFile *.gradle set filetype=groovy
+autocmd Filetype       groovy setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype       gdscript setlocal tabstop=4 shiftwidth=4 sts=0
 
 
 """ Enables italic font on comments

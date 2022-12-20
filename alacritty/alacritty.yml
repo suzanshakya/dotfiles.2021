@@ -60,6 +60,8 @@ window:
   #     - buttonless: Title bar, transparent background and no title bar buttons
   decorations: none
 
+  opacity: .95
+
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:
@@ -108,7 +110,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "Hack Nerd Font Mono"
+    family: "JetBrains Mono NL"
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -355,7 +357,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: .95
+#background_opacity: .95
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -403,8 +405,8 @@ background_opacity: .95
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
-  program: /opt/homebrew/bin/zsh
+#shell:
+  #program: /opt/homebrew/bin/zsh
   #args:
   #  - -c
   #  - "tmux attach || tmux new -s blank"

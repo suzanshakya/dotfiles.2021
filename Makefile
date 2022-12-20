@@ -12,6 +12,10 @@ zsh-setup:
 	ln -sf `pwd`/zsh/.zshrc ~/
 	ln -sf `pwd`/zsh/.zshenv ~/
 	ln -sf `pwd`/zsh/.env_brew ~/
+	ln -sf `pwd`/zsh/.env_android ~/
+	ln -sf `pwd`/zsh/.env_cocos ~/
+	ln -sf `pwd`/zsh/.zprofile ~/
+	ln -sf `pwd`/zsh/.zshrc ~/
 	ln -sf `pwd`/zsh/.zsh_plugins.txt ~/
 	ln -sf `pwd`/zsh/.p10k.zsh ~/
 
@@ -23,6 +27,7 @@ install-swiss-army:
 	### Install z - jump around
 	#brew install z
 
+dev-setup:
 	### Install ripgrep, my alternative to grep
 	apt install -y ripgrep
 
@@ -39,6 +44,9 @@ install-swiss-army:
 
 	### Install tree, as in linux
 	apt install -y tree
+
+	### Install z - jump around
+	brew install z
 
 	### SSH config
 	ln -sf `pwd`/ssh/config ~/.ssh/
@@ -117,6 +125,7 @@ endif
 	ln -sf `pwd`/neovim/init.vim ~/.config/nvim/
 
 	pip install pynvim
+	PATH=~/.pyenv/shims:$$PATH && pip install pynvim
 
 	### Initialized installation of vim plugins
 	nvim +PlugInstall +qall
