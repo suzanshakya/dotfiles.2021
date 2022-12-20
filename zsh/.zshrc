@@ -18,14 +18,14 @@ fi
 
 #export PATH=~/.local/bin:$PATH
 
-export PYENV_ROOT=~/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-export PATH=$PYENV_ROOT/shims:$PATH
-#
-#### pyenv setups
-eval "$(pyenv init -)"
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-pyenv virtualenvwrapper_lazy
+#export PYENV_ROOT=~/.pyenv
+#export PATH=$PYENV_ROOT/bin:$PATH
+#export PATH=$PYENV_ROOT/shims:$PATH
+##
+##### pyenv setups
+#eval "$(pyenv init -)"
+#export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+#pyenv virtualenvwrapper_lazy
 ### PATH #######################################################################
 
 
@@ -183,6 +183,8 @@ function cd() {
 }
 # Activate above function now!
 cd . >/dev/null
+
+export PATH=$PATH:/app/bin
 
 
 #zprof
