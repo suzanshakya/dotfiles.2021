@@ -27,12 +27,11 @@ install-swiss-army:
 	### Install z - jump around
 	#brew install z
 
-dev-setup:
 	### Install ripgrep, my alternative to grep
 	apt install -y ripgrep
 
 	### Install fd, my alternative to find
-	#apt install -y fd-find
+	apt install -y fd-find
 
 	### Install fzf, my file interactor
 	apt install -y fzf
@@ -43,10 +42,7 @@ dev-setup:
 	ln -sf `pwd`/ranger/rc.conf ~/.config/ranger/
 
 	### Install tree, as in linux
-	apt install -y tree
-
-	### Install z - jump around
-	brew install z
+	#apt install -y tree
 
 	### SSH config
 	ln -sf `pwd`/ssh/config ~/.ssh/
