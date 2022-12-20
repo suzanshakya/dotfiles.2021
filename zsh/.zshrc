@@ -214,9 +214,8 @@ function cd() {
 # Activate above function now!
 cd . >/dev/null
 
-PATH=~/projects/teslatech/callbreakserver/k8s_scripts:$PATH
 
-source <(kubectl completion zsh)
+export PATH=$PATH:/app/bin
 
 #zprof
 

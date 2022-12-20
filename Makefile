@@ -137,8 +137,8 @@ python-setup:
 
 	### Install python
 	apt install -y build-essential libffi-dev zlib1g-dev libbz2-dev libreadline-dev libssl-dev libsqlite3-dev
-	PYENV_ROOT=~/.pyenv ~/.pyenv/bin/pyenv install 3.9.7
-	PYENV_ROOT=~/.pyenv ~/.pyenv/bin/pyenv global 3.9.7
+	#PYENV_ROOT=~/.pyenv ~/.pyenv/bin/pyenv install 3.9.7
+	#PYENV_ROOT=~/.pyenv ~/.pyenv/bin/pyenv global 3.9.7
 
 	git clone https://github.com/pyenv/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
 
