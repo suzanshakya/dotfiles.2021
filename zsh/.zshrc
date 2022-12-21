@@ -42,12 +42,12 @@ antibody bundle < ~/.zsh_plugins.txt
 
 
 # Sources z - jump around
-source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+#source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 
 
 ### pyenv setups
-eval "$(pyenv init -)"
-pyenv virtualenvwrapper_lazy
+#eval "$(pyenv init -)"
+#pyenv virtualenvwrapper_lazy
 
 
 ### Control + w clears one word. Separator is '/' instead of ' '.
