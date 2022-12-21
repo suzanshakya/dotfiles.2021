@@ -2,7 +2,7 @@ target:
 	make zsh-setup
 	make tmux-setup
 	make git-setup
-	make python-setup
+	#make python-setup
 	make neovim-setup
 	make install-swiss-army
 
