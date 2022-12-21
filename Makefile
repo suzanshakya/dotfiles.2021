@@ -71,24 +71,47 @@ gitconfig:
 	### git aliases
 	git config --global alias.s status
 	git config --global alias.st status
+	git config --global alias.ss 'status -s'
+	git config --global alias.sts stash
+
 	git config --global alias.co checkout
-	git config --global alias.ap 'add -p'
+	git config --global alias.sw switch
+	git config --global alias.swc 'switch -c'
+
 	git config --global alias.f fetch
 	git config --global alias.fe fetch
+	git config --global alias.fp 'fetch --prune'
+
 	git config --global alias.b branch
 	git config --global alias.br 'branch -r'
+
+	git config --global alias.c commit
 	git config --global alias.cm 'commit -m'
+	git config --global alias.cms "commit -m 'Squash this commit to the previous commit.'"
+	git config --global alias.cp cherry-pick
+
 	git config --global alias.d diff
 	git config --global alias.di diff
 	git config --global alias.dc 'diff --cached'
+
 	git config --global alias.cop 'checkout -p'
+	git config --global alias.cob 'checkout -b'
+
+	git config --global alias.r restore
+	git config --global alias.rs 'restore --staged'
+	git config --global alias.rsp 'restore --staged -p'
+
+	git config --global alias.rb rebase
+	git config --global alias.rst reset
+
 	git config --global alias.pl pull
 	git config --global alias.ps push
-	git config --global alias.reba rebase
-	git config --global alias.rese reset
-	git config --global alias.rest restore
-	git config --global alias.m merge
+
 	git config --global alias.a add
+	git config --global alias.ap 'add -p'
+	git config --global alias.au 'add -u'
+	git config --global alias.m merge
+
 	git config --global alias.ls ls-files
 
 	git config --global core.excludesfile '~/.gitignore_global'
