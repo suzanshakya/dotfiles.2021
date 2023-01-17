@@ -113,6 +113,9 @@ alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 
 alias c='clear'
 
+alias px='ps aux'
+alias fd="fdfind "
+
 
 # Homebrew would have created symlink at /usr/local/bin/
 # But I'm using custom app downloaded from github PR supporting arm.
