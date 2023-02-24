@@ -24,7 +24,7 @@ antibody bundle < ~/.zsh_plugins.txt
 
 
 # Sources z - jump around
-source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+[[ ! -f $HOMEBREW_PREFIX/etc/profile.d/z.sh ]] || source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 
 
 #### pyenv setups
@@ -198,7 +198,7 @@ cd . >/dev/null
 
 PATH=~/projects/teslatech/callbreakserver/k8s_scripts:$PATH
 
-source <(kubectl completion zsh)
+#source <(kubectl completion zsh)
 
 #zprof
 
