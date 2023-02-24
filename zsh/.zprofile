@@ -3,7 +3,7 @@
 [[ -f ~/.env_cocos ]] && source ~/.env_cocos
 
 
-export PATH="$(pyenv root)/shims:$PATH"
+#export PATH="$(pyenv root)/shims:$PATH"
 export PATH=~/.local/bin:$PATH
 export PATH=$PATH:~/projects/teslatech/callbreakserver/scripts/docker
 
