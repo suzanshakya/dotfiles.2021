@@ -90,7 +90,7 @@ alias g='git'
 alias k='kubectl'
 alias d='docker'
 
-alias vi='nvim'
+#alias vi='nvim'
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 
 alias c='clear'
