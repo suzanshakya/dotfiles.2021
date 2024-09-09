@@ -56,7 +56,7 @@ dev-setup:
 
 rectangle-setup:
 	brew install rectangle
-	ln -sf `pwd`/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/
+	#ln -sf `pwd`/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/
 
 
 git-setup:
