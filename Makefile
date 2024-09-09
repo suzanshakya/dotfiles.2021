@@ -1,7 +1,7 @@
 target:
-	make install-zsh
-	make install-rectangle
-	make install-git
+	make zsh-setup
+	make rectangle-setup
+	make git-setup
 
 brew-setup:
 	[[ -f /opt/homebrew/bin/brew ]] || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -25,7 +25,7 @@ zsh-setup:
 	ln -sf `pwd`/zsh/.p10k.zsh ~/
 
 	### Install antibody, my zsh plugin manager
-	brew install antibody
+	#brew install antibody
 
 
 dev-setup:
@@ -152,6 +152,7 @@ endif
 
 neovim-setup:
 	brew install neovim
+	brew install code-minimap
 
 	### Install vim-plug, my neovim plugin manager
 ifeq (,$(wildcard ~/.local/share/nvim/site/autoload/plug.vim))
@@ -181,8 +182,8 @@ python-setup:
 	pyenv virtualenvwrapper_lazy
 
 	### Install python
-	[[ -d ~/.pyenv/versions/3.10.2 ]] || pyenv install 3.10.2
-	pyenv global 3.10.2
+	[[ -d ~/.pyenv/versions/3.12.5 ]] || pyenv install 3.12.5
+	pyenv global 3.12.5
 
 
 misc:
