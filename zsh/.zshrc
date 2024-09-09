@@ -101,10 +101,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias g='git'
-alias k='kubectl'
-alias d='docker'
 
-#alias vi='nvim'
 alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 
 alias c='clear'
@@ -210,11 +207,4 @@ function cd() {
 # Activate above function now!
 cd . >/dev/null
 
-PATH=~/projects/teslatech/callbreakserver/k8s_scripts:$PATH
-
-#source <(kubectl completion zsh)
-
 #zprof
-
-# krew path
-#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
