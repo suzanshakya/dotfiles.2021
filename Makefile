@@ -8,11 +8,11 @@ brew-setup:
 	#ln -sf `pwd`/zsh/.zprofile ~/
 
 
-#hacker-env:
-#	make install-alacritty
-#	make install-tmux
-#	make install-neovim
-#	make install-python
+hacker-env:
+	make alacritty-setup
+	make tmux-setup
+	make neovim-setup
+	make python-setup
 
 
 zsh-setup:
@@ -24,8 +24,8 @@ zsh-setup:
 	ln -sf `pwd`/zsh/.zsh_plugins.txt ~/
 	ln -sf `pwd`/zsh/.p10k.zsh ~/
 
-	### Install antibody, my zsh plugin manager
-	#brew install antibody
+	### Install antidote, my zsh plugin manager
+	brew install antidote
 
 
 dev-setup:
@@ -56,7 +56,6 @@ dev-setup:
 
 rectangle-setup:
 	brew install rectangle
-	#ln -sf `pwd`/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/
 
 
 git-setup:
@@ -217,4 +216,3 @@ clean:
 	rm -r ~/.config/nvim/init.vim
 	rm -r ~/.config/alacritty/alacritty.yml
 	rm -r ~/.config/ranger/rc.conf
-	rm -r ~/Library/Preferences/com.knollsoft.Rectangle.plist
