@@ -1,4 +1,4 @@
-### List of zsh plugins powered by antibody
+### List of zsh plugins powered by antidote
 romkatv/powerlevel10k
 
 zsh-users/zsh-autosuggestions

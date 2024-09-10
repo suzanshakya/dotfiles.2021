@@ -5,7 +5,6 @@ target:
 
 brew-setup:
 	[[ -f /opt/homebrew/bin/brew ]] || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	#ln -sf `pwd`/zsh/.zprofile ~/
 
 
 hacker-env:
@@ -19,7 +18,6 @@ zsh-setup:
 	ln -sf `pwd`/zsh/.env_brew ~/
 	ln -sf `pwd`/zsh/.env_android ~/
 	ln -sf `pwd`/zsh/.env_cocos ~/
-	ln -sf `pwd`/zsh/.zprofile ~/
 	ln -sf `pwd`/zsh/.zshrc ~/
 	ln -sf `pwd`/zsh/.zsh_plugins.txt ~/
 	ln -sf `pwd`/zsh/.p10k.zsh ~/
@@ -214,5 +212,5 @@ clean:
 	rm -r ~/.tmux.conf
 	rm -r ~/.gitignore_global
 	rm -r ~/.config/nvim/init.vim
-	rm -r ~/.config/alacritty/alacritty.yml
+	rm -r ~/.config/alacritty/alacritty.toml
 	rm -r ~/.config/ranger/rc.conf

@@ -107,8 +107,7 @@ alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
 alias c='clear'
 
 
-# Homebrew would have created symlink at /usr/local/bin/
-# But I'm using custom app downloaded from github PR supporting arm.
+# Uncomment this if Alacritty is installed at /Applications
 #alias alacritty='/Applications/Alacritty.app/Contents/MacOS/alacritty'
 
 alias pv='echo -n "which python      : " && which python
@@ -206,5 +205,20 @@ function cd() {
 }
 # Activate above function now!
 cd . >/dev/null
+
+
+[[ -f ~/.env_brew ]] && source ~/.env_brew
+[[ -f ~/.env_android ]] && source ~/.env_android
+[[ -f ~/.env_cocos ]] && source ~/.env_cocos
+
+
+export PATH=~/.local/bin:$PATH
+export FZF_DEFAULT_COMMAND="fd --type file   \
+                               --follow      \
+                               --hidden      \
+                               --exclude .git"
+
+export HIGHLIGHT_STYLE=solarized-light
+#export PYTHONSTARTUP=~/.pythonrc
 
 #zprof
