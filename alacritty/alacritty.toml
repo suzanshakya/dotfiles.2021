@@ -33,71 +33,85 @@ x = 0
 y = 5
 
 [[keyboard.bindings]]
+# Save in vim. Send C-s which is mapped to :w in vim
 chars = "\u0013"
 key = "S"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Close tmux pane. Send C-d.
 chars = "\u0004"
 key = "W"
 mods = "Command"
 
 [[keyboard.bindings]]
+# New tab in tmux. Send C-b + c
 chars = "\u0002c"
 key = "T"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Focus one tab right. Send C-b + n
 chars = "\u0002n"
-key = "RBracket"
+key = "}"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
+# Focus one tab left. Send -C-b + p
 chars = "\u0002p"
-key = "LBracket"
+key = "{"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
+# Move to tab 1. Send C-b + 1
 chars = "\u00021"
 key = "Key1"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 2. Send C-b + 2
 chars = "\u00022"
 key = "Key2"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 3. Send C-b + 3
 chars = "\u00023"
 key = "Key3"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 4. Send C-b + 4
 chars = "\u00024"
 key = "Key4"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 5. Send C-b + 5
 chars = "\u00025"
 key = "Key5"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 6. Send C-b + 6
 chars = "\u00026"
 key = "Key6"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 7. Send C-b + 7
 chars = "\u00027"
 key = "Key7"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 8. Send C-b + 8
 chars = "\u00028"
 key = "Key8"
 mods = "Command"
 
 [[keyboard.bindings]]
+# Move to tab 9. Send C-b + 9
 chars = "\u00029"
 key = "Key9"
 mods = "Command"

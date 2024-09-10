@@ -126,7 +126,7 @@ gitconfig:
 alacritty-setup:
 	brew install alacritty
 	mkdir -p ~/.config/alacritty/
-	ln -sf `pwd`/alacritty/alacritty.yml ~/.config/alacritty/
+	ln -sf `pwd`/alacritty/alacritty.toml ~/.config/alacritty/
 
 
 tmux-setup:
