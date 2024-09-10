@@ -11,7 +11,7 @@ hacker-env:
 	make alacritty-setup
 	make tmux-setup
 	make neovim-setup
-	make python-setup
+	make dev-setup
 
 
 zsh-setup:
