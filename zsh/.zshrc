@@ -13,6 +13,7 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+[[ -f ~/.env_brew ]] && source ~/.env_brew
 source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 
 # ${ZDOTDIR:-~}/.zshrc
@@ -50,9 +51,6 @@ pyenv virtualenvwrapper_lazy
 autoload -U select-word-style
 select-word-style bash
 export WORDCHARS='.-'
-
-export VISUAL=nvim
-export EDITOR=nvim
 
 ### This actually enables tab completion on subcommands.
 ### So, git pu<Tab> will suggest 'pull' and 'push'.
@@ -119,6 +117,10 @@ alias pv='echo -n "which python      : " && which python
 
 alias pi="pip install"
 alias ta="tmux attach || tmux new -s blank"
+
+alias vi=nvim
+export VISUAL=nvim
+export EDITOR=nvim
 
 
 ### `vip os` will open python os module with vi
@@ -207,7 +209,6 @@ function cd() {
 cd . >/dev/null
 
 
-[[ -f ~/.env_brew ]] && source ~/.env_brew
 [[ -f ~/.env_android ]] && source ~/.env_android
 [[ -f ~/.env_cocos ]] && source ~/.env_cocos
 
