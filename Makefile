@@ -79,9 +79,12 @@ gitconfig:
 	git config --global alias.ss 'status -s'
 	git config --global alias.sts stash
 
-	git config --global alias.co checkout
 	git config --global alias.sw switch
 	git config --global alias.swc 'switch -c'
+
+	git config --global alias.co checkout
+	git config --global alias.cop 'checkout -p'
+	git config --global alias.cob 'checkout -b'
 
 	git config --global alias.f fetch
 	git config --global alias.fe fetch
@@ -98,9 +101,6 @@ gitconfig:
 	git config --global alias.d diff
 	git config --global alias.di diff
 	git config --global alias.dc 'diff --cached'
-
-	git config --global alias.cop 'checkout -p'
-	git config --global alias.cob 'checkout -b'
 
 	git config --global alias.r restore
 	git config --global alias.rs 'restore --staged'
