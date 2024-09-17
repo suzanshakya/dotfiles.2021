@@ -54,8 +54,10 @@ Plug 'wfxr/minimap.vim'
 Plug 'romainl/flattened'
 
 """ Autocompletion
+"let g:minimap_auto_start = 1
+"let g:minimap_auto_start_win_enter = 1
 let g:python_host_prog = '/full/path/to/neovim2/bin/python'
-let g:python3_host_prog = '~/.pyenv/versions/3.10.2/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.12.5/bin/python'
 
 Plug 'davidhalter/jedi-vim'
 "let g:jedi#completions_command = "<Tab>"
