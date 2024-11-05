@@ -1,0 +1,11 @@
+Host data.tt
+  Hostname data.teslatech.com.np
+  User root
+  RequestTTY yes
+  RemoteCommand tmux attach-session -t lobby || tmux new-session -s lobby
+
+Host prod4
+  Hostname prod4.callbreak.com
+  User root
+  RequestTTY yes
+  RemoteCommand tmux attach-session -t lobby || tmux new-session -s lobby
