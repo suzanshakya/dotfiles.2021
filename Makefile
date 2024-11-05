@@ -179,8 +179,9 @@ python-setup:
 	pyenv virtualenvwrapper_lazy
 
 	### Install python
-	[[ -d ~/.pyenv/versions/3.12.5 ]] || pyenv install 3.12.5
-	pyenv global 3.12.5
+	[[ -d ~/.pyenv/versions/3.13.0 ]] || pyenv install 3.13.0
+	pyenv global 3.13.0
+	pip install -U pip
 
 
 misc:
