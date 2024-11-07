@@ -116,7 +116,7 @@ alias pv='echo -n "which python      : " && which python
           echo -n "ipython --version : " && ipython --version'
 
 alias pi="pip install"
-alias ta="tmux attach -s localhost || tmux new -s localhost"
+alias ta="tmux attach -t localhost || tmux new -t localhost"
 
 alias vi=nvim
 export VISUAL=nvim
