@@ -14,7 +14,11 @@ fi
 
 
 [[ -f ~/.env_brew ]] && source ~/.env_brew
-source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
+
+uname=$(uname)
+[[ $uname == "Linux" ]] && antidote_dir=~/.antidote
+[[ $uname == "Darwin" ]] && antidote_dir=$HOMEBREW_PREFIX/opt/antidote/share/antidote
+source $antidote_dir/antidote.zsh
 
 # ${ZDOTDIR:-~}/.zshrc
 
@@ -25,7 +29,7 @@ zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
 [[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
 
 # Lazy-load antidote from its functions directory.
-fpath=(/path/to/antidote/functions $fpath)
+fpath=($antidote_dir/functions $fpath)
 autoload -Uz antidote
 
 # Generate a new static file whenever .zsh_plugins.txt is updated.
