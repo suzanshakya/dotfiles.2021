@@ -1,23 +1,20 @@
 UNAME := $(shell uname)
 
 target:
+	# brew setup
+ifeq ($(UNAME), Darwin)
+	[ -f /opt/homebrew/bin/brew ] || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+endif
 	make zsh-setup
 	make git-setup
 	make tmux-setup
-ifeq ($(UNAME), Darwin)
-	make rectangle-setup
-endif
-
-brew-setup:
-	[[ -f /opt/homebrew/bin/brew ]] || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-
-hacker-env:
-ifeq ($(UNAME), Darwin)
-	make alacritty-setup
-endif
 	make neovim-setup
 	make dev-setup
+
+ifeq ($(UNAME), Darwin)
+	make rectangle-setup
+	make alacritty-setup
+endif
 
 
 zsh-setup:

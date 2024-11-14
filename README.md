@@ -54,14 +54,11 @@ When new zsh shell is created, autorun `workon $(cat .workon)` if there's a .wor
 
 **To install:**  
 ```
-# To setup minimal installation that includes zsh 'optimizations'
+# To setup minimal installation that includes zsh, git, tmux, neovim configurations
 make
 
-# To install alacritty, tmux, neovim & python
-make hacker-env
-
 # If you need to install only python, you can do:
-make install-python
+make python-setup
 
 # To install misc packages such as nginx, node, openjdk, gh, bat
 make misc
